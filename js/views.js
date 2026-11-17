@@ -13,12 +13,13 @@
   const A = window.ATLAS_APP;
   if (!A) return;
   const SITE = 'kaulvishesh.github.io';   // fill in your own host if you publish a copy; anything else only reads the count
-  const API = 'https://abacus.jasoncameron.dev/', NS = 'bharat-itihaas', KEY = 'views';
+  const API = 'https://abacus.jasoncameron.dev/', NS = 'bharat-itihaas', KEY = 'visits';   // (the earlier key "views" holds only launch-day test visits)
+  const TIMEOUT = 6000;   // the free service can be slow; give up quietly rather than leave a request hanging
   const embed = /[?&#]embed=1/.test(window.ATLAS_INITIAL_URL || location.href);
   let total = null;
 
   const fmt = (n) => { try { return n.toLocaleString('en-IN'); } catch (_) { return String(n); } };
-  const label = () => (total == null ? '' : A.hi() ? fmt(total) + ' बार देखा गया' : fmt(total) + ' views');
+  const label = () => (total == null ? '' : A.hi() ? fmt(total) + ' बार देखा गया' : fmt(total) + (total === 1 ? ' view' : ' views'));
   function paint() {
     document.querySelectorAll('[data-views]').forEach((el) => { el.textContent = label(); el.hidden = total == null; });
   }
@@ -27,15 +28,18 @@
     let counted = false;
     try { counted = sessionStorage.getItem('atlas-view') === '1'; } catch (_) { /* private mode */ }
     const op = location.hostname === SITE && !embed && !counted ? 'hit' : 'get';
-    fetch(API + op + '/' + NS + '/' + KEY, { cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' })
+    // mark the visit as counted before asking, so a slow or failed answer can never make a reload count twice
+    if (op === 'hit') { try { sessionStorage.setItem('atlas-view', '1'); } catch (_) { /* fine */ } }
+    const ctl = window.AbortController ? new AbortController() : null, timer = ctl ? setTimeout(() => ctl.abort(), TIMEOUT) : 0;
+    fetch(API + op + '/' + NS + '/' + KEY, { cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer', signal: ctl ? ctl.signal : undefined })
       .then((r) => (r.ok ? r.json() : null))
       .then((j) => {
+        clearTimeout(timer);
         if (!j || typeof j.value !== 'number') return;
         total = j.value;
-        if (op === 'hit') { try { sessionStorage.setItem('atlas-view', '1'); } catch (_) { /* fine */ } }
         paint();
       })
-      .catch(() => { /* counter stays hidden */ });
+      .catch(() => { clearTimeout(timer); /* counter stays hidden */ });
   }
 
   document.addEventListener('atlas:lang', paint);

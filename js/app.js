@@ -77,6 +77,14 @@
   map.createPane('landPane').style.zIndex = 210;
   const shadePane = map.createPane('shadePane'); shadePane.style.zIndex = 215; shadePane.classList.add('leaflet-shade-pane');
   map.createPane('gridPane').style.zIndex = 218;
+  // The dotted "trail" behind a moving traveller is redrawn every frame. In the shared vector layer it is projected at the camera's
+  // current zoom but drawn inside an SVG that Leaflet is scaling with CSS while the camera zooms, so during a journey's push-in it
+  // drifted away from the route line (by up to ~140 px) and snapped back afterwards. Trails therefore get their own SVG layer,
+  // re-based to the current view once per frame before they are redrawn.
+  map.createPane('trailPane').style.zIndex = 410; map.getPane('trailPane').style.pointerEvents = 'none';
+  const trailRenderer = L.svg({ pane: 'trailPane', padding: 0.5 });
+  let trailTick = -1;
+  const rebaseTrails = (ts) => { if (ts !== trailTick) { trailTick = ts; if (trailRenderer._map) trailRenderer._update(); } };
   map.getPane('gridPane').style.pointerEvents = 'none';
   const landRenderer = L.svg({ pane: 'landPane', padding: 0.6 });
   const gridRenderer = L.svg({ pane: 'gridPane', padding: 0.6 });
@@ -217,7 +225,7 @@
     const full = L.polyline(r.pts, { color: r.color, weight: 2.6, opacity: 0.75, className: 'route-full' }).addTo(layer);
     full.bindTooltip(pick(r, 'n'), { sticky: true, className: 'plabel' });
     full.on('click', (ev) => L.popup().setLatLng(ev.latlng).setContent('<b>' + escapeHtml(pick(r, 'n')) + '</b><br>' + escapeHtml(pick(r, 'note'))).openOn(map));
-    const trail = L.polyline([r.pts[0]], { color: r.color, weight: 3.4, opacity: 0.95, lineCap: 'round', dashArray: '1 7', interactive: false }).addTo(layer);
+    const trail = L.polyline([r.pts[0]], { renderer: trailRenderer, color: r.color, weight: 3.4, opacity: 0.95, lineCap: 'round', dashArray: '1 7', interactive: false }).addTo(layer);
     const mode0 = r.mode || MODE_OF[r.id] || 'horse', form = FORM[mode0], mode = form ? form.lead : mode0, tv = TRAV[mode] || TRAV.horse;
     const trav = L.marker(r.pts[0], { icon: L.divIcon({ className: 'traveler ' + mode, html: '<span class="tv">' + atlasIcon(mode) + '</span>', iconSize: [tv[0], tv[1]], iconAnchor: [tv[0] / 2, tv[1] * tv[2]] }), interactive: false, keyboard: false, zIndexOffset: 500 }).addTo(layer);
     let facing = 1;
@@ -268,6 +276,7 @@
       let k = 1; while (k < cum.length - 1 && cum[k] < d) k++;
       const seg = (d - cum[k - 1]) / Math.max(1e-6, cum[k] - cum[k - 1]);
       const pos = [r.pts[k - 1][0] + (r.pts[k][0] - r.pts[k - 1][0]) * seg, r.pts[k - 1][1] + (r.pts[k][1] - r.pts[k - 1][1]) * seg];
+      rebaseTrails(ts);
       trail.setLatLngs(r.pts.slice(0, k).concat([pos]));
       trav.setLatLng(pos);
       if (followers.length) placeFollowers(d);
