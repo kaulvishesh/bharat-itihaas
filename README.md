@@ -12,6 +12,8 @@
 [![Checks](https://github.com/kaulvishesh/bharat-itihaas/actions/workflows/ci.yml/badge.svg)](https://github.com/kaulvishesh/bharat-itihaas/actions/workflows/ci.yml)
 [![License: GPL v3](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
 
+> **Credit where it's due:** Bharat Itihaas is inspired by, and its design language is built on, **[Chronicles of the Realm · 江山时序 (jiangshan-map)](https://github.com/DeanChensj/jiangshan-map)** by **[DeanChensj](https://github.com/DeanChensj)**, an interactive historical atlas of China. Go and star the original. See [Acknowledgements](#acknowledgements).
+
 <p align="center">
   <a href="https://kaulvishesh.github.io/bharat-itihaas/">
     <img src="assets/hero.webp" alt="Bharat Itihaas in 25 seconds: the opening title sequence, the Bodh Gaya scene of The Emperor Who Wept with the Bodhi tree, the Buddha and the Mahabodhi temple drawn on the map, and the Then and Now satellite curtain over the Mughal era" width="100%" />
@@ -298,6 +300,18 @@ After editing `js/data.js`, run `validate.js`, then the exports above so the sta
 
 ---
 
+## Acknowledgements
+
+**[Chronicles of the Realm · 江山时序 (jiangshan-map)](https://github.com/DeanChensj/jiangshan-map)**, created by **[DeanChensj](https://github.com/DeanChensj)** ([live demo](https://deanchen.me/jiangshan-map/?lang=en)), is the project this atlas grew out of. The idea and the shape of Bharat Itihaas are theirs, and the original creator deserves the credit for them. From it we took:
+
+- **The visual structure**: the warm parchment palette with a vermilion accent, the docked information panel and the banded, scrubbable timeline.
+- **The ideas we adapted for India**: tracing a place across eras, person chronicles, a map quiz, shareable deep links, an iframe embed, and the AI-agent integration (`llms.txt`, an MCP server, a CLI and a browser API).
+- **The repository layout and the structure of this README.**
+
+The India data, the content in English and Hindi, the cinematic journeys, music and the code for them were written for this project, and the whole repository is released under GPL-3.0, the same licence as the original. If you want an interactive atlas of China, use theirs.
+
+---
+
 ## Data Sources & License
 
 Code and the data created by this project are released under **GPL-3.0**.
@@ -317,7 +331,7 @@ Code and the data created by this project are released under **GPL-3.0**.
 | Map engine | [Leaflet](https://leafletjs.com) 1.9.4 from cdnjs, with Subresource Integrity | BSD-2-Clause |
 | Event photos and summaries | Wikipedia, fetched live when a popup opens | CC BY-SA 4.0 (credit in each popup) |
 | Fonts | Cormorant Garamond, Cinzel, Noto Serif/Sans (+ Devanagari), Amita; self-hosted in `fonts/` | SIL Open Font License 1.1 |
-| Design language | [jiangshan-map](https://github.com/DeanChensj/jiangshan-map) (palette structure, docked panel, banded timeline) | GPL-3.0 |
+| Design language and repository structure | [jiangshan-map](https://github.com/DeanChensj/jiangshan-map) by [DeanChensj](https://github.com/DeanChensj) (palette structure, docked panel, banded timeline, README and repo layout) | GPL-3.0, Copyright © 2026 DeanChensj |
 
 The full list, with links, is in [`NOTICE.md`](NOTICE.md).
 

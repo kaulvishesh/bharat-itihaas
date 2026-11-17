@@ -12,6 +12,8 @@
 [![Checks](https://github.com/kaulvishesh/bharat-itihaas/actions/workflows/ci.yml/badge.svg)](https://github.com/kaulvishesh/bharat-itihaas/actions/workflows/ci.yml)
 [![License: GPL v3](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
 
+> **श्रेय उसे, जिसका है:** भारत इतिहास **[Chronicles of the Realm · 江山时序 (jiangshan-map)](https://github.com/DeanChensj/jiangshan-map)** से प्रेरित है और उसी की डिज़ाइन-भाषा पर बना है। इसे **[DeanChensj](https://github.com/DeanChensj)** ने बनाया है, जो चीन का एक इंटरैक्टिव ऐतिहासिक मानचित्र है। मूल परियोजना को स्टार ज़रूर दें। देखें [आभार](#आभार)।
+
 <p align="center">
   <a href="https://kaulvishesh.github.io/bharat-itihaas/#lang=hi">
     <img src="assets/hero.webp" alt="25 सेकंड में भारत इतिहास: शीर्षक दृश्य, 'वह सम्राट जो रोया' का बोधगया दृश्य जिसमें नक़्शे पर बोधिवृक्ष, बुद्ध और महाबोधि मंदिर बने हैं, और मुग़ल युग पर तब-और-अब का उपग्रह पर्दा" width="100%" />
@@ -193,6 +195,18 @@ node scripts/export_data.js         # data/atlas.json: गैर-JS टूल �
 
 ---
 
+## आभार
+
+**[Chronicles of the Realm · 江山时序 (jiangshan-map)](https://github.com/DeanChensj/jiangshan-map)**, जिसे **[DeanChensj](https://github.com/DeanChensj)** ने बनाया है ([लाइव डेमो](https://deanchen.me/jiangshan-map/?lang=en)), वह परियोजना है जिससे यह एटलस उपजा है। भारत इतिहास का विचार और उसका ढाँचा उन्हीं का है, और इसका श्रेय मूल रचयिता को जाता है। हमने उनसे लिया:
+
+- **दृश्य-ढाँचा**: चर्मपत्र जैसा गर्म रंग-पटल और सिंदूरी उभार, जुड़ा हुआ जानकारी-पैनल और खींचने योग्य खंडित समय-पट्टी।
+- **भारत के लिए ढाले गए विचार**: स्थान को युगों में खोजना, व्यक्ति-वृत्त, नक़्शा-क्विज़, साझा करने योग्य लिंक, iframe एम्बेड और AI-एजेंट एकीकरण (`llms.txt`, MCP सर्वर, CLI और ब्राउज़र API)।
+- **रिपॉज़िटरी का ढाँचा और इस README की बनावट।**
+
+भारत का डेटा, हिन्दी-अंग्रेज़ी सामग्री, सिनेमाई यात्राएँ, संगीत और उनका कोड इस परियोजना के लिए अलग से लिखे गए हैं, और पूरी रिपॉज़िटरी मूल की तरह ही GPL-3.0 के अंतर्गत है। चीन का इंटरैक्टिव एटलस चाहिए तो उनका वाला इस्तेमाल करें।
+
+---
+
 ## डेटा-स्रोत और लाइसेंस
 
 कोड और इस परियोजना द्वारा बनाया गया डेटा **GPL-3.0** के अंतर्गत है। हर स्रोत और उसका लाइसेंस [`NOTICE.md`](NOTICE.md) में है:
@@ -210,7 +224,7 @@ node scripts/export_data.js         # data/atlas.json: गैर-JS टूल �
 | नक़्शा इंजन | [Leaflet](https://leafletjs.com) 1.9.4 | BSD-2-Clause |
 | घटनाओं के चित्र और सार | विकिपीडिया, पॉपअप खुलने पर | CC BY-SA 4.0 |
 | फ़ॉन्ट | Cormorant Garamond, Cinzel, Noto Serif/Sans, Amita (साइट के साथ) | SIL Open Font License 1.1 |
-| डिज़ाइन की भाषा | [jiangshan-map](https://github.com/DeanChensj/jiangshan-map) | GPL-3.0 |
+| डिज़ाइन की भाषा और रिपॉज़िटरी का ढाँचा | [jiangshan-map](https://github.com/DeanChensj/jiangshan-map), [DeanChensj](https://github.com/DeanChensj) द्वारा | GPL-3.0, Copyright © 2026 DeanChensj |
 
 **अनुमानित सीमाएँ।** सीमाएँ, मार्ग, नदियाँ और स्थानों की स्थिति **अनुमानित हैं और केवल चित्रण के लिए**; ये प्रामाणिक नहीं हैं और भारतीय सर्वेक्षण विभाग (Survey of India) का आधिकारिक नक़्शा नहीं हैं। वर्तमान भारत उसी रूप में दिखाया गया है जैसा भारत स्वयं को आधिकारिक रूप से दर्शाता है, जिसमें पूरा जम्मू-कश्मीर और लद्दाख शामिल है; यह एक अनुमान है, आधिकारिक फ़ाइल नहीं।
 

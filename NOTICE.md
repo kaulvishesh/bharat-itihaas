@@ -7,7 +7,7 @@ It builds on and ships the following third-party material:
 |---|---|---|
 | Historical boundaries (`js/geo.js`, `geojson/`) | [aourednik/historical-basemaps](https://github.com/aourednik/historical-basemaps), simplified | GPL-3.0 |
 | Coastline (`js/land.js`) and the present-day outline of India (`scripts/apply_india_claim.js`) | [Natural Earth](https://www.naturalearthdata.com) 50m land; 10m countries, India point of view | Public domain |
-| Design language (palette structure, docked panel, banded timeline) | [jiangshan-map](https://github.com/DeanChensj/jiangshan-map) | GPL-3.0 |
+| Design language and repository structure (palette structure, docked panel, banded timeline, README and repository layout; the idea of this atlas) | **[Chronicles of the Realm · 江山时序 (jiangshan-map)](https://github.com/DeanChensj/jiangshan-map)** by [DeanChensj](https://github.com/DeanChensj), Copyright © 2026 DeanChensj | GPL-3.0 |
 | Map engine | [Leaflet](https://leafletjs.com) 1.9.4, loaded from cdnjs with Subresource Integrity | BSD-2-Clause |
 | Hillshade and Relief base map (`js/terrain.js`) | Drawn in the visitor's browser from the public [Terrain Tiles](https://registry.opendata.aws/terrain-tiles/) dataset on AWS Open Data (Mapzen), which for this region is built mainly from SRTM and GMTED2010 (US Geological Survey) and ETOPO1 sea-floor depths (NOAA) | US Government data, public domain; credit shown on the map. Not for navigation |
 | Satellite view and the "today" side of Then & Now | [NASA Blue Marble, Next Generation](https://visibleearth.nasa.gov/collection/1484/blue-marble) served by [NASA GIBS](https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/gibs) | NASA data, CC0 / no restrictions; credit shown on the map |
