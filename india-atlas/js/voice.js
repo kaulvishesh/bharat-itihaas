@@ -63,8 +63,9 @@
   }
 
   // ---------------------------------------------------------------- public
+  const duck = (on) => { if (window.ATLAS_MUSIC) window.ATLAS_MUSIC.duck(on); };   // lower the ambient music while someone is speaking
   function stop() {
-    S.gen++;
+    S.gen++; duck(false);
     if (S.audio) { S.audio.onended = null; S.audio.onerror = null; try { S.audio.pause(); } catch (_) { /* gone */ } S.audio = null; }
     try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (_) { /* none */ }
   }
@@ -72,6 +73,7 @@
     o = o || {};
     if (!text) { if (o.onend) o.onend(); return; }
     stop(); const gen = S.gen;
+    const end = o.onend; o = Object.assign({}, o, { onend: () => { duck(false); if (end) end(); } }); duck(true);
     if (o.clip && !hi()) {
       manifest().then((m) => {
         if (gen !== S.gen) return;

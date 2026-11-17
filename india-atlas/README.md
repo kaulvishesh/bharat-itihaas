@@ -14,7 +14,8 @@ A fresh, lightweight codebase (Leaflet + vanilla JS, no build step) — not a pa
 - **Then & Now** (under Layers): drag a curtain across the map — the era on parchment on one side, today's satellite imagery with modern borders and cities on the other.
 - **Full guided tour** (all 93 steps, from the Journeys menu), with optional **voice narration** (browser speech synthesis).
 - **Animated journeys** (`js/routes.js`), **rivers** (`js/rivers.js`) and **roads, canals and dams that appear in their own period** (`js/works.js`: Uttarapatha, Grand Trunk Road, Western Yamuna Canal, Kallanai, Bhakra…).
-- **Search** (press `/`), relief/satellite/modern basemaps, a "locate it on the map" quiz, shareable links, full English/Hindi UI.
+- **Ambient music** (♪ in the header, on the title screen and in the journey controls; press `M`): a tanpura-style drone, a slow pad and sparse bell phrases in a raga scale that follows the era (Bhoopali, Yaman, Bhairavi, Bhairav; each journey has its own), synthesised live with the Web Audio API (`js/music.js`, no audio files). Off by default, remembered once chosen, ducks under narration, pauses when the tab is hidden.
+- **Search** (press `/`), relief/satellite basemaps, a "locate it on the map" quiz, shareable links, full English/Hindi UI.
 - **Territory chart** (📊, under ⋯): size of the largest mapped realm in every era (rough estimates), and **download any era as SVG** (⬇ in the info panel).
 - **Installable and offline-capable** (PWA: the app shell and Leaflet are cached; map tiles still need a network). Respects `prefers-reduced-motion`.
 - **Click a kingdom** for a realm card (notes, rough extent, places and events inside, neighbours, the same realm in other eras). **Zoom in** and the map fills with drawn forts, market towns, temples, stupas, mosques, harbours, mountain chains and forests.

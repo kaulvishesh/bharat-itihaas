@@ -46,10 +46,11 @@
   const cine = document.createElement('div'); cine.id = 'cine'; cine.setAttribute('role', 'region'); cine.setAttribute('aria-label', 'Journey');
   cine.innerHTML = '<div class="cine-veil"></div><div class="cine-top"><span class="cine-name"></span><span class="cine-right"><button type="button" class="cine-lang"></button><button type="button" class="cine-x"></button></span></div>' +
     '<div class="cine-bot"><div class="cine-cap" aria-live="polite"><div class="cine-year"></div><h2 class="cine-h"></h2><p class="cine-p"></p><div class="cine-end"></div></div>' +
-    '<div class="cine-ctl"><div class="cine-seg"></div><div class="cine-btns"><button type="button" class="cine-btn" data-a="prev">‹</button><button type="button" class="cine-btn" data-a="pause"></button><button type="button" class="cine-btn" data-a="next">›</button><button type="button" class="cine-btn" data-a="say"></button></div></div></div>';
+    '<div class="cine-ctl"><div class="cine-seg"></div><div class="cine-btns"><button type="button" class="cine-btn" data-a="prev">‹</button><button type="button" class="cine-btn" data-a="pause"></button><button type="button" class="cine-btn" data-a="next">›</button><button type="button" class="cine-btn" data-a="music"></button><button type="button" class="cine-btn" data-a="say"></button></div></div></div>';
   wrap.appendChild(cine);
   const q = (s) => cine.querySelector(s);
   const el = { name: q('.cine-name'), x: q('.cine-x'), lang: q('.cine-lang'), year: q('.cine-year'), h: q('.cine-h'), p: q('.cine-p'), end: q('.cine-end'), seg: q('.cine-seg'), prev: q('[data-a=prev]'), pause: q('[data-a=pause]'), next: q('[data-a=next]'), say: q('[data-a=say]'), bot: q('.cine-bot'), top: q('.cine-top') };
+  if (window.ATLAS_MUSIC) window.ATLAS_MUSIC.bind(q('[data-a=music]')); else q('[data-a=music]').remove();
   const ICON_P = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 2.5h3v11h-3zM9.5 2.5h3v11h-3z"/></svg>', ICON_R = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>';
   const ICON_S = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 6h2.8L8 3v10L4.8 10H2z"/><path d="M10.5 5.4a3.6 3.6 0 010 5.2M12.3 3.6a6.2 6.2 0 010 8.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>';
   const cineLayer = L.layerGroup().addTo(map);

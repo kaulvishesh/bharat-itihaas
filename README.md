@@ -19,6 +19,7 @@ Scrub through 2,500 years of Indian history on one map: **19 eras** from the Mah
 |---|---|
 | **Cinematic Journeys** (✦ in the header) | Five directed stories where the camera cuts and pushes in, the year rolls like a counter and a caption narrates. Start with [*The Emperor Who Wept*](https://kaulvishesh.github.io/bharat-itihaas/#journey=maurya). |
 | **Then & Now** (Layers menu) | Drag a curtain across the map: the era on parchment on one side, today's satellite imagery, borders and cities on the other. |
+| **Ambient music** (♪ in the header, or press M) | A soft tanpura drone with slow raga phrases that follow the era you are in, generated live in your browser (no audio files). Off until you switch it on; it dips under the narration. |
 | **Click anything** | Kingdoms open a realm card; events open an illustrated plate with the matching Wikipedia article; zoom in and forts, temples, markets, mountains and forests are drawn on the map. |
 | **Trace a place** (📍) | Click any spot and see which realm held it in every era. |
 | **Hindi** | The हिन्दी button switches the whole interface, captions and narration. |

@@ -13,6 +13,7 @@ It builds on and ships the following third-party material:
 | Satellite view and the "today" side of Then & Now | [NASA Blue Marble, Next Generation](https://visibleearth.nasa.gov/collection/1484/blue-marble) served by [NASA GIBS](https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/gibs) | NASA data, CC0 / no restrictions; credit shown on the map |
 | Place and event photos and summaries | Wikipedia, fetched live when a popup opens | CC BY-SA 4.0 (credit shown in each popup) |
 | Journey narration audio (`audio/en/`) | Synthesised with [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) (ONNX build by onnx-community) via `kokoro-js`; generated speech, not a recording of a person | Apache-2.0 (model weights and code) |
+| Ambient music (`js/music.js`) | Synthesised live in the browser with the Web Audio API: a tanpura-style drone, a soft pad and sparse bell notes in raga scales (just intonation). No recordings, samples or downloaded audio | GPL-3.0 with the rest of the code |
 | Landmark illustrations (`js/landmarks.js`) | Drawn for this project, in the house style of `js/icons.js` | GPL-3.0 with the rest of the code |
 | Fonts: Cormorant Garamond, Cinzel, Noto Serif / Sans (+ Devanagari), Amita | Copies of the Google Fonts files, self-hosted in `fonts/` so visitors' browsers never contact Google (`scripts/fetch_fonts.js`); licence texts in `fonts/licenses/` | SIL Open Font License 1.1 |
 

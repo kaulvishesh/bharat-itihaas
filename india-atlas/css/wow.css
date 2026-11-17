@@ -47,7 +47,15 @@ html[lang="hi"] .in-go, html[lang="hi"] .in-skip { letter-spacing: .02em; text-t
 .in-skip:hover { border-color: var(--gold-2); background: rgba(217, 178, 90, .14); }
 .in-lang { position: absolute; z-index: 4; top: 30px; right: 36px; height: 32px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--gold-soft); background: rgba(10, 15, 32, .45); color: var(--paper); font-size: 12.5px; }
 .in-lang:hover { border-color: var(--gold-2); color: #fff; }
-.in-go:focus-visible, .in-skip:focus-visible, .in-lang:focus-visible { outline: 3px solid #fff3c4; outline-offset: 3px; }
+.in-music { position: absolute; z-index: 4; top: 30px; right: 150px; height: 32px; padding: 0 14px 0 11px; display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; border: 1px solid var(--gold-soft); background: rgba(10, 15, 32, .45); color: var(--paper); font-size: 12.5px; }
+.in-music:hover { border-color: var(--gold-2); color: #fff; }
+.in-music.on { background: linear-gradient(180deg, var(--gold-2), var(--gold)); border-color: #fff0bd; color: var(--indigo); font-weight: 600; }
+.in-music svg { width: 15px; height: 15px; }
+.in-go:focus-visible, .in-skip:focus-visible, .in-lang:focus-visible, .in-music:focus-visible { outline: 3px solid #fff3c4; outline-offset: 3px; }
+/* ambient-music toggle (js/music.js): the slash shows while it is off */
+.icon-btn { width: 34px; padding: 0; justify-content: center; }
+.icon-btn svg { width: 16px; height: 16px; }
+button[aria-pressed="true"] .mx { display: none; }
 
 /* the ink map */
 .in-svg .in-rose { fill: none; stroke: var(--gold-2); stroke-width: .7; opacity: .22; transform-box: fill-box; transform-origin: center; animation: inSpin 160s linear infinite; }
@@ -78,7 +86,7 @@ html[lang="hi"] .in-svg .city text { letter-spacing: 0; text-transform: none; fo
   .in-copy { justify-self: center; padding-right: 0; text-align: center; max-width: 520px; }
   .in-seal { font-size: clamp(60px, 18vw, 96px); } .in-rule { margin: 12px auto; width: 190px; } .in-rule i { left: 18px; width: 150px; } .in-tag { font-size: 17px; margin-bottom: 16px; }
   .in-stats { justify-content: center; margin-bottom: 20px; } .in-stats div { padding: 0 12px; } .in-stats dt { font-size: 26px; } .in-cta { justify-content: center; }
-  .in-go, .in-skip { padding: 13px 22px; } .in-lang { top: 22px; right: 22px; }
+  .in-go, .in-skip { padding: 13px 22px; } .in-lang { top: 22px; right: 22px; } .in-music { top: 22px; right: 124px; }
 }
 @media (max-height: 560px) and (min-width: 861px) { .in-seal { font-size: 84px; } .in-tag { margin-bottom: 14px; } .in-stats { margin-bottom: 16px; } }
 
