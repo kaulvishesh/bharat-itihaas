@@ -29,7 +29,7 @@ Have you ever wondered while reading about India's past:
 - *"What did the Mauryas, the Guptas, the Cholas and the Mughals each actually hold at their height, and who was next door?"*
 - *"How did the map change from the sixteen Mahajanapadas, through Ashoka's empire, the Tripartite Struggle, the Chola sea empire, the Delhi Sultanate, Vijayanagara and the Mughals, to the Company, the Raj, Partition and the Republic?"*
 
-**Bharat Itihaas** brings together **2,500 years** of Indian history across **19 eras** into a single interactive engraved-parchment atlas: **simplified historical boundaries** with a ghost outline of the previous era, **74 events**, **121 places**, **animated travellers and armies**, **five cinematic journeys**, **person chronicles**, and **soft ambient music** — everything in **English and Hindi**. No heavy print atlases required: drag the timeline, click any place, or just press play on a journey.
+**Bharat Itihaas** brings together **2,500 years** of Indian history across **19 eras** into a single interactive engraved-parchment atlas: **simplified historical boundaries** with a ghost outline of the previous era, **75 events**, **121 places**, **animated travellers and armies**, **five cinematic journeys**, **person chronicles**, and **soft ambient music** — everything in **English and Hindi**. No heavy print atlases required: drag the timeline, click any place, or just press play on a journey.
 
 It is a static site (Leaflet and vanilla JavaScript, no build step, no analytics). The app shell works offline once loaded; map tiles need a connection.
 
@@ -341,7 +341,7 @@ The full list, with links, is in [`NOTICE.md`](NOTICE.md).
 
 **Hindi and narration.** Hindi text was drafted with machine assistance and has not been reviewed by a native-speaker editor; corrections are welcome. The English narration is machine-generated speech.
 
-**Privacy.** No analytics, cookies or tracking (your browser keeps only your music choice, plus a note for the current session that you have seen the intro). Fonts are self-hosted; the page contacts only its own host, cdnjs (Leaflet), AWS and NASA (map surfaces) and Wikipedia/Wikimedia (popups, only when you open one).
+**Privacy.** No analytics, cookies, accounts or tracking. The one exception is a view counter: each visit adds 1 to a single total kept by [Abacus](https://jasoncameron.dev/abacus), a free open-source counter service. A visit is counted once per browser session; nothing about you is sent (no cookie, identifier or page address), and, like any web server, the service sees your IP address in the request and stores only the number. If you block it, the site works the same. Your browser keeps only your music choice, plus a note for the current session that you have seen the intro and been counted. Fonts are self-hosted; the page contacts only its own host, cdnjs (Leaflet), AWS and NASA (map surfaces), Abacus (the count) and Wikipedia/Wikimedia (popups, only when you open one).
 
 **Reusing this project.** Credit **Bharat Itihaas** with a link to https://github.com/kaulvishesh/bharat-itihaas, and cite the upstream sources above.
 

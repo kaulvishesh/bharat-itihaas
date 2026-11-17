@@ -454,8 +454,9 @@
     h += '<details class="sec"><summary>' + t().rulers + '</summary><ul class="rulers">' + (hi() && e.rulersHi ? e.rulersHi : e.rulers).map((r) => '<li>' + r + '</li>').join('') + '</ul></details>';
     h += '<details class="sec"><summary>' + t().places + ' <em>' + e.places.length + '</em></summary><ul class="places">' + e.places.map((pl, i) =>
       '<li data-pl="' + i + '"><b>' + escapeHtml(pick(pl, 'n')) + '</b> — ' + escapeHtml(pick(pl, 'note') || '') + '</li>').join('') + '</ul></details>';
-    h += '<div class="p-foot">' + t().disclaimer + ' <a href="' + REPO + '" target="_blank" rel="noopener noreferrer">' + t().github + ' ↗</a></div>';
+    h += '<div class="p-foot">' + t().disclaimer + ' <a href="' + REPO + '" target="_blank" rel="noopener noreferrer">' + t().github + ' ↗</a> <span class="views" data-views hidden></span></div>';
     panel.innerHTML = h;
+    if (window.ATLAS_VIEWS) window.ATLAS_VIEWS.paint();
     panel.scrollTop = 0;
     $('btnSpeak').addEventListener('click', () => { speak(pick(e, 'name') + '. ' + pick(e, 'tag') + ' ' + (pick(e, 'story') || '')); });
     panel.querySelectorAll('.ev').forEach((b) => b.addEventListener('click', () => {

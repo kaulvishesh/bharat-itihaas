@@ -20,7 +20,7 @@
     'Shivaji crowned Chhatrapati': 'Shivaji', 'Calcutta founded': 'Job Charnock', 'Khalsa founded': 'Khalsa', 'Battle of Plassey': 'Battle of Plassey', 'Third Battle of Panipat': 'Third Battle of Panipat',
     'Company obtains the diwani of Bengal': 'Treaty of Allahabad', 'Treaty of Salbai': 'Treaty of Salbai', 'The Rebellion of 1857': 'Indian Rebellion of 1857', 'Indian National Congress founded': 'Indian National Congress',
     'First railway': 'History of rail transport in India', 'Capital moves to Delhi': 'Delhi Durbar', 'Independence and Partition': 'Partition of India', 'Hyderabad integrated': 'Operation Polo',
-    'The Constitution comes into force': 'Constitution of India', 'States Reorganisation': 'States Reorganisation Act, 1956', 'Bangladesh Liberation War': 'Bangladesh Liberation War',
+    'The Constitution comes into force': 'Constitution of India', 'States Reorganisation': 'States Reorganisation Act, 1956', 'Exodus of Kashmiri Pandits': 'Exodus of Kashmiri Hindus', 'Bangladesh Liberation War': 'Bangladesh Liberation War',
     'Economic liberalisation': 'Economic liberalisation in India', 'Three new states formed': 'Uttarakhand', 'Telangana formed': 'Andhra Pradesh Reorganisation Act, 2014'
   };
 })();

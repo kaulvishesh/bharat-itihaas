@@ -73,6 +73,7 @@ html[lang='hi'] .subtitle-mark { letter-spacing: .04em; text-transform: none; fo
 .menu a:hover, .menu a:focus-visible { background: var(--crimson-soft); }
 .menu a svg { width: 15px; height: 15px; fill: currentColor; flex: none; }
 .p-foot a { color: inherit; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+.p-foot .views { white-space: nowrap; } .p-foot .views::before { content: '· '; }
 .menu button.on { color: var(--crimson); font-weight: 600; background: var(--crimson-soft); }
 
 /* ───────── stage ───────── */

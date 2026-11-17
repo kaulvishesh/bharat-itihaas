@@ -85,10 +85,11 @@
       '<dl class="in-stats"><div><dt data-n="' + st.years + '">0</dt><dd>' + t.years + '</dd></div><div><dt data-n="' + st.eras + '">0</dt><dd>' + t.eras + '</dd></div><div><dt data-n="' + st.events + '">0</dt><dd>' + t.events + '</dd></div><div><dt data-n="' + st.places + '">0</dt><dd>' + t.places + '</dd></div></dl>' +
       '<div class="in-cta"><button type="button" class="in-go">' + escapeHtml(t.go) + ' <span aria-hidden="true">→</span></button><button type="button" class="in-skip">' + escapeHtml(t.skip) + '</button></div></div>' +
       '<div class="in-art">' + mapSvg(h) + '</div>' +
-      '<a class="in-gh" href="' + A.repo + '" target="_blank" rel="noopener noreferrer">' + (h ? 'GitHub पर स्रोत-कोड' : 'Open source on GitHub') + ' ↗</a>' +
+      '<div class="in-foot"><a class="in-gh" href="' + A.repo + '" target="_blank" rel="noopener noreferrer">' + (h ? 'GitHub पर स्रोत-कोड' : 'Open source on GitHub') + ' ↗</a><span class="in-views" data-views hidden></span></div>' +
       '<button type="button" class="in-music"><span class="ml"></span></button>' +
       '<button type="button" class="in-lang" aria-label="Language">' + escapeHtml(t.lang) + '</button>';
     if (window.ATLAS_MUSIC) window.ATLAS_MUSIC.bind(root.querySelector('.in-music')); else root.querySelector('.in-music').remove();
+    if (window.ATLAS_VIEWS) window.ATLAS_VIEWS.paint();
     root.querySelectorAll('.in-stats dt').forEach((el, i) => countUp(el, +el.dataset.n, 2000 + i * 160));
     root.querySelector('.in-go').addEventListener('click', () => hide('journeys'));
     root.querySelector('.in-skip').addEventListener('click', () => hide());

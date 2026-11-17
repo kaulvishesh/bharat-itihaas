@@ -49,7 +49,9 @@ html[lang="hi"] .in-go, html[lang="hi"] .in-skip { letter-spacing: .02em; text-t
 .in-lang:hover { border-color: var(--gold-2); color: #fff; }
 .in-music { position: absolute; z-index: 4; top: 30px; right: 150px; height: 32px; padding: 0 14px 0 11px; display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; border: 1px solid var(--gold-soft); background: rgba(10, 15, 32, .45); color: var(--paper); font-size: 12.5px; }
 .in-music:hover { border-color: var(--gold-2); color: #fff; }
-.in-gh { position: absolute; z-index: 4; left: 50%; bottom: 30px; transform: translateX(-50%); font-size: 12.5px; letter-spacing: .05em; color: rgba(244, 236, 216, .62); text-decoration: none; white-space: nowrap; }
+.in-foot { position: absolute; z-index: 4; left: 50%; bottom: 30px; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; font-size: 12.5px; letter-spacing: .05em; white-space: nowrap; }
+.in-gh { color: rgba(244, 236, 216, .62); text-decoration: none; }
+.in-views { color: rgba(244, 236, 216, .5); } .in-views::before { content: '·'; margin-right: 10px; }
 .in-gh:hover { color: #fff3c4; text-decoration: underline; text-underline-offset: 3px; }
 .in-gh:focus-visible { outline: 3px solid #fff3c4; outline-offset: 4px; border-radius: 4px; }
 .in-music.on { background: linear-gradient(180deg, var(--gold-2), var(--gold)); border-color: #fff0bd; color: var(--indigo); font-weight: 600; }
