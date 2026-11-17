@@ -1,74 +1,215 @@
 # Bharat Itihaas · भारत इतिहास
 
-<p align="left"><strong>English</strong> · <a href="README_HI.md">हिन्दी</a> · <a href="CONTRIBUTING.md">Contributing</a></p>
+<p align="left">
+  <strong>English</strong> · <a href="README_HI.md">हिन्दी (Hindi)</a> · <a href="CONTRIBUTING.md">Contributing</a>
+</p>
 
-**An interactive historical atlas of India, 500 BCE to today.**
+**An Interactive Historical Atlas of India from the Mahajanapadas (500 BCE) to Today — Scrub Through Time, Ride a Cinematic Journey, and Walk in the Footsteps of History**
 
-### ▶ Live: **[kaulvishesh.github.io/bharat-itihaas](https://kaulvishesh.github.io/bharat-itihaas/)**
+[**Play Live Demo → https://kaulvishesh.github.io/bharat-itihaas/**](https://kaulvishesh.github.io/bharat-itihaas/) · [हिन्दी में खोलें](https://kaulvishesh.github.io/bharat-itihaas/#lang=hi)
 
 [![Deploy to GitHub Pages](https://github.com/kaulvishesh/bharat-itihaas/actions/workflows/pages.yml/badge.svg)](https://github.com/kaulvishesh/bharat-itihaas/actions/workflows/pages.yml)
 [![Checks](https://github.com/kaulvishesh/bharat-itihaas/actions/workflows/ci.yml/badge.svg)](https://github.com/kaulvishesh/bharat-itihaas/actions/workflows/ci.yml)
 [![License: GPL v3](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
 
-![Opening title sequence](assets/intro.jpg)
+<p align="center">
+  <a href="https://kaulvishesh.github.io/bharat-itihaas/">
+    <img src="assets/intro.jpg" alt="Bharat Itihaas — the opening title sequence: the subcontinent inked onto the page, trade roads lighting up between great cities" width="100%" />
+  </a>
+</p>
 
-Scrub through 2,500 years of Indian history on one map: **19 eras** from the Mahajanapadas to today, **74 events**,
-**121 places**, animated travellers and armies, and everything in **English and Hindi**. It is a static site
-(Leaflet + vanilla JS, no build step, no analytics); the app shell works offline once loaded, map tiles need a connection.
+---
 
-## Try these
+## Why It's Fun to Explore
 
-| | |
+Have you ever wondered while reading about India's past:
+- *"Where exactly are Bodh Gaya, Nalanda and Pataliputra — and how far was the Magadhan heartland from Taxila on the Silk Road?"*
+- *"What did the Mauryas, the Guptas, the Cholas and the Mughals each actually hold at their height, and who was next door?"*
+- *"How did the map change from the sixteen Mahajanapadas, through Ashoka's empire, the Tripartite Struggle, the Chola sea empire, the Delhi Sultanate, Vijayanagara and the Mughals, to the Company, the Raj, Partition and the Republic?"*
+
+**Bharat Itihaas** brings together **2,500 years** of Indian history across **19 eras** into a single interactive engraved-parchment atlas: **simplified historical boundaries** with a ghost outline of the previous era, **74 events**, **121 places**, **animated travellers and armies**, **five cinematic journeys**, **person chronicles**, and **soft ambient music** — everything in **English and Hindi**. No heavy print atlases required: drag the timeline, click any place, or just press play on a journey.
+
+It is a static site (Leaflet and vanilla JavaScript, no build step, no analytics). The app shell works offline once loaded; map tiles need a connection.
+
+---
+
+### Feature 1: Scrub the Timeline to Watch Realms Rise & Fall, and Compare Then with Now
+
+- **19 Eras on a Single Canvas**: From the Mahajanapadas (500 BCE) through the Mauryas, Kushans and Satavahanas, the Guptas, Harsha, Chalukyas and Pallavas, the Pratiharas, Palas and Rashtrakutas, the Cholas, the Delhi Sultanate, Vijayanagara and the Deccan sultanates, the Mughals, the Marathas, the Company and the Raj, to Independence and South Asia today. A proportional time rail at the bottom is banded by each era's largest realm; click a band, press play, or use the arrow keys.
+- **Ghost Boundary of the Previous Era**: Every era shows the outline of the one before it as a faint ghost, so gains and losses are immediately visible. Click any kingdom for a realm card (notes, rough extent, places and events inside, neighbours, the same realm in other eras).
+- **Rivers, Roads, Canals and Dams in Their Own Period**: The Uttarapatha and the Grand Trunk Road, the Western Yamuna Canal, the Kallanai, Bhakra and more appear only when they existed; rivers are drawn as schematic courses.
+- **A Map That Fills In As You Zoom**: Zoom in and the map is drawn with forts in each realm's colours, market towns, temples, stupas, mosques, harbours, mountain chains and forests, all in one hand-drawn pictogram set.
+- **Then & Now Curtain**: Under **Layers**, drag a curtain across the map: the era on parchment on one side, today's satellite imagery with modern borders and cities on the other.
+- **Three Base Maps**: the engraved **Antique atlas** (default), a **Relief** map and **Satellite**, all drawn from open data.
+
+> [Try It Live: Maurya Empire under Ashoka (250 BCE) →](https://kaulvishesh.github.io/bharat-itihaas/#era=2&lang=en)
+
+![Then & Now: the Maurya Empire on parchment against today's satellite view](assets/then-and-now.jpg)
+
+---
+
+### Feature 2: Cinematic Journeys — Five Directed Stories
+
+Click **✦ Journeys** in the header (or open a link below). The map takes the whole screen; each scene is a cinematic cut and slow push-in (never a fly-over, so realms are always fully drawn), the era changes underneath, the year rolls like a counter and a lower-third caption narrates:
+
+| Journey | Link |
+| :--- | :--- |
+| *The Emperor Who Wept* (500 → 250 BCE) | [`#journey=maurya`](https://kaulvishesh.github.io/bharat-itihaas/#journey=maurya) |
+| *Eyes on India* (travellers' accounts) | [`#journey=travellers`](https://kaulvishesh.github.io/bharat-itihaas/#journey=travellers) |
+| *The Tamil Sea Empire* | [`#journey=chola`](https://kaulvishesh.github.io/bharat-itihaas/#journey=chola) |
+| *Sultans, Shahs & Emperors* | [`#journey=sultans`](https://kaulvishesh.github.io/bharat-itihaas/#journey=sultans) |
+| *The Road to Independence* | [`#journey=freedom`](https://kaulvishesh.github.io/bharat-itihaas/#journey=freedom) |
+
+- **Illustrated Landmarks Drawn on the Map**: the Bodhi tree with the seated Buddha and the Mahabodhi temple, Nalanda's brick monasteries, Ashoka's lion pillar, the Brihadisvara vimana, the Qutb Minar, the Taj Mahal and the Red Fort. They also appear as engraved plates in those events' popups.
+- **Narration** (🔊): pre-rendered neural speech ([Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M)) in English, and the best voice installed on your device for Hindi.
+- **Ambient Music** (♪, or press `M`): a tanpura-style drone with slow raga phrases that follow the era (Bhoopali, Yaman, Bhairavi, Bhairav; each journey has its own), synthesised live in your browser with the Web Audio API — no audio files. Off until you switch it on, remembered once chosen, ducks under narration, pauses when the tab is hidden.
+- **Take the Map Back Any Time**: pause and drag or zoom freely; `←` `→` `Space` `Esc` work. There is also a **full guided tour** of all 93 steps in the Journeys menu.
+
+> [Try It Live: The Emperor Who Wept →](https://kaulvishesh.github.io/bharat-itihaas/#journey=maurya)
+
+![Journey scene at Bodh Gaya: the Bodhi tree, the seated Buddha and the Mahabodhi temple drawn on the map](assets/journey-bodh-gaya.jpg)
+
+---
+
+### Feature 3: Click Any Place or Event (`Trace a Place`)
+
+**Click anything** on the map, or use **Trace a place** (📍) and click any spot:
+- **Which Realm Held This Spot, in Every Era**: a card lists the realm covering that point across all 19 eras, plus the events that happened nearby — computed by point-in-polygon against the boundaries.
+- **Events with an Engraved Plate and the Wikipedia Article**: an event popup shows an engraved plate (the Bodhi tree for the Buddha's enlightenment, the Lion Capital for Ashoka's pillars...) and the Wikipedia article about the incident itself, fetched live (CC BY-SA, credit shown).
+- **Search** (`/`): find places, events, realms, journeys and people in either language.
+
+> [Try It Live: Trace Pataliputra (25.61°N 85.14°E) in the Gupta era →](https://kaulvishesh.github.io/bharat-itihaas/?trace=25.61,85.14#era=4&lang=en)
+
+![Event popup with an engraved plate of the Bodhi tree and a Wikipedia summary](assets/event-popup.jpg)
+
+---
+
+### Feature 4: Person Chronicles, and a Map Quiz
+
+Click **People** (👤) to follow eight lives across changing borders, with animated routes, English and Hindi bios and a **compare** view showing lifespans and overlap:
+
+| Person | Link |
+| :--- | :--- |
+| Gautama Buddha | [`?person=buddha`](https://kaulvishesh.github.io/bharat-itihaas/?person=buddha#lang=en) |
+| Ashoka | [`?person=ashoka`](https://kaulvishesh.github.io/bharat-itihaas/?person=ashoka#lang=en) |
+| Xuanzang | [`?person=xuanzang`](https://kaulvishesh.github.io/bharat-itihaas/?person=xuanzang#lang=en) |
+| Adi Shankara | [`?person=shankara`](https://kaulvishesh.github.io/bharat-itihaas/?person=shankara#lang=en) |
+| Guru Nanak | [`?person=nanak`](https://kaulvishesh.github.io/bharat-itihaas/?person=nanak#lang=en) |
+| Akbar | [`?person=akbar`](https://kaulvishesh.github.io/bharat-itihaas/?person=akbar#lang=en) |
+| Shivaji | [`?person=shivaji`](https://kaulvishesh.github.io/bharat-itihaas/?person=shivaji#lang=en) |
+| Mohandas K. Gandhi | [`?person=gandhi`](https://kaulvishesh.github.io/bharat-itihaas/?person=gandhi#lang=en) |
+
+Think you know the map? Open **Layers → Quiz** for a "locate it on the map" challenge.
+
+---
+
+## Keyboard Shortcuts & Shareable Deep Links
+
+### Keyboard Shortcuts
+
+| Key / Action | Effect |
+| :--- | :--- |
+| **`/`** | Focus the search box: places, events, realms, journeys, people |
+| **`←` / `→`** or bottom **`‹ / ›`** | Previous / next era (inside a journey: previous / next scene) |
+| **`Space`** | Pause or resume a journey |
+| **`M`** | Ambient music on or off |
+| **`Esc`** | Close a popup, the Then & Now curtain or a journey |
+| **Click the भारत seal** | Replay the opening title sequence |
+
+### Shareable Deep Links
+
+The address bar mirrors the era and language. Append parameters to share any moment:
+- **Open an era** (0 to 18): [`#era=2`](https://kaulvishesh.github.io/bharat-itihaas/#era=2&lang=en) (Maurya Empire under Ashoka) / [`#era=4`](https://kaulvishesh.github.io/bharat-itihaas/#era=4&lang=en) (Gupta Empire) / [`#era=9`](https://kaulvishesh.github.io/bharat-itihaas/#era=9&lang=en) (Chola Empire at its peak) / [`#era=14`](https://kaulvishesh.github.io/bharat-itihaas/#era=14&lang=en) (Mughal Empire at its largest) / [`#era=17`](https://kaulvishesh.github.io/bharat-itihaas/#era=17&lang=en) (Independence & the Republic)
+- **Switch language**: `#lang=en` (English) / [`#lang=hi`](https://kaulvishesh.github.io/bharat-itihaas/#lang=hi) (हिन्दी), e.g. `#era=14&lang=hi`
+- **Start a journey**: `#journey=maurya`, `travellers`, `chola`, `sultans` or `freedom`
+- **Open a person's chronicle**: [`?person=akbar`](https://kaulvishesh.github.io/bharat-itihaas/?person=akbar#lang=en)
+- **Trace a point**: `?trace=28.61,77.21` (Delhi)
+- **Start the full guided tour**: `?tour=1`
+- **Skip or force the title sequence**: `?intro=0` / `?intro=1`
+
+### Embed in Your Page
+
+Put any view of the atlas into a blog post or course site:
+
+1. Open the atlas and set up the view you want.
+2. Add `embed=1` to the URL.
+3. Paste it into an `<iframe>`:
+
+```html
+<iframe
+  src="https://kaulvishesh.github.io/bharat-itihaas/?embed=1&person=akbar#lang=en"
+  width="100%" height="520" loading="lazy" style="border:0"
+  title="Bharat Itihaas · Akbar"></iframe>
+```
+
+The embedded map hides the toolbar and info panel. Control it from the parent page with `postMessage` (replies arrive as `{atlasReply, id, result}`, era changes as `{atlasEvent:'era', index}`):
+
+```js
+frame.contentWindow.postMessage({ atlas: 'goto', args: [6], id: 1 }, '*');   // use a specific target origin in production
+```
+
+| Parameter | Effect |
 |---|---|
-| **Cinematic Journeys** (✦ in the header) | Five directed stories where the camera cuts and pushes in, the year rolls like a counter and a caption narrates. Start with [*The Emperor Who Wept*](https://kaulvishesh.github.io/bharat-itihaas/#journey=maurya). |
-| **Then & Now** (Layers menu) | Drag a curtain across the map: the era on parchment on one side, today's satellite imagery, borders and cities on the other. |
-| **Ambient music** (♪ in the header, or press M) | A soft tanpura drone with slow raga phrases that follow the era you are in, generated live in your browser (no audio files). Off until you switch it on; it dips under the narration. |
-| **Click anything** | Kingdoms open a realm card; events open an illustrated plate with the matching Wikipedia article; zoom in and forts, temples, markets, mountains and forests are drawn on the map. |
-| **Trace a place** (📍) | Click any spot and see which realm held it in every era. |
-| **Hindi** | The हिन्दी button switches the whole interface, captions and narration. |
+| `embed=1` | Turn on embed mode (required) |
+| `era`, `lang` (in the hash) | Era 0 to 18 and `en` / `hi` |
+| `person`, `trace`, `tour`, `journey`, `intro` | Same as the share links above |
 
-<table>
-  <tr>
-    <td width="50%"><img src="assets/journey-bodh-gaya.jpg" alt="Journey scene at Bodh Gaya: the Mahabodhi temple, the Bodhi tree and the seated Buddha"><br><sub>A journey scene: the Bodhi tree, the Buddha and the Mahabodhi temple drawn on the map at Bodh Gaya.</sub></td>
-    <td width="50%"><img src="assets/then-and-now.jpg" alt="Then and Now curtain comparing the Maurya Empire with satellite imagery of today"><br><sub>Then &amp; Now: the Maurya Empire on parchment against today's satellite view.</sub></td>
-  </tr>
-  <tr>
-    <td colspan="2"><img src="assets/event-popup.jpg" alt="Event popup with an engraved plate of the Bodhi tree and a Wikipedia summary"><br><sub>Events carry an engraved plate and the Wikipedia article about the incident itself.</sub></td>
-  </tr>
-</table>
+---
 
-## Features
+## AI Agent, MCP & LLM Integration
 
-- **19 eras** (500 BCE → today) with simplified historical boundaries, a ghost outline of the previous era, and a proportional time rail.
-- **Trace a place** (📍): click anywhere to see which realm covered that spot in every era, plus the events that happened near it, computed by point-in-polygon against the boundaries.
-- **Person chronicles** (👤): Buddha, Ashoka, Xuanzang, Adi Shankara, Guru Nanak, Akbar, Shivaji and Gandhi, with animated routes, English/Hindi bios and a **compare** view (lifespans and overlap).
-- **Opening title sequence**: the subcontinent is inked onto the page, trade roads light up, the numbers count up (once per session; `?intro=0` skips, `?intro=1` forces, click the भारत seal to replay).
-- **Cinematic Journeys** (✦ in the header): five directed stories, *The Emperor Who Wept*, *Eyes on India*, *The Tamil Sea Empire*, *Sultans, Shahs & Emperors* and *The Road to Independence*. Each scene is a cinematic cut and slow push-in (never a fly-over, so realms are always fully drawn), the era changes underneath, the year rolls like a counter and a lower-third caption narrates. Key moments carry **illustrated landmarks** drawn on the map (the Bodhi tree with the seated Buddha and the Mahabodhi temple, Nalanda's brick monasteries, Ashoka's lion pillar, the Brihadisvara vimana, the Qutb Minar, the Taj Mahal, the Red Fort), which also appear as engraved plates in those events' popups. **Narration** (🔊) plays pre-rendered neural speech (Kokoro-82M) in English and the best voice installed on the device for Hindi. Pause to take the map in your own hands; ← → Space Esc work. Link straight to one with `#journey=maurya`.
-- **Then & Now** (under Layers): drag a curtain across the map, the era on parchment on one side, today's satellite imagery with modern borders and cities on the other.
-- **Ambient music** (♪ in the header, on the title screen and in the journey controls; press `M`): a tanpura-style drone, a slow pad and sparse bell phrases in a raga scale that follows the era (Bhoopali, Yaman, Bhairavi, Bhairav; each journey has its own), synthesised live with the Web Audio API (`js/music.js`, no audio files). Off by default, remembered once chosen, ducks under narration, pauses when the tab is hidden.
-- **Full guided tour** (all 93 steps, from the Journeys menu), with optional **voice narration** (browser speech synthesis).
-- **Animated journeys** (`js/routes.js`), **rivers** (`js/rivers.js`) and **roads, canals and dams that appear in their own period** (`js/works.js`: Uttarapatha, Grand Trunk Road, Western Yamuna Canal, Kallanai, Bhakra…).
-- **Search** (press `/`), relief and satellite basemaps, a "locate it on the map" quiz, shareable links, full English/Hindi UI.
-- **Territory chart** (📊, under ⋯): size of the largest mapped realm in every era (rough estimates), and **download any era as SVG** (⬇ in the info panel).
-- **Installable and offline-capable** (PWA: the app shell and Leaflet are cached; map tiles still need a network). Respects `prefers-reduced-motion`.
-- **Click a kingdom** for a realm card (notes, rough extent, places and events inside, neighbours, the same realm in other eras). **Zoom in** and the map fills with drawn forts, market towns, temples, stupas, mosques, harbours, mountain chains and forests.
-- One hand-drawn pictogram set (`js/icons.js`) is used everywhere, including the travellers (rider, pilgrim, ship, lorry) that walk the routes.
-- **Static topic pages** (`topics/`, English + Hindi, with inline SVG maps), `sitemap.xml` and `robots.txt` for search engines.
-- **For developers:** `window.atlasAPI`, iframe embed (`?embed=1`) with `postMessage`, a zero-dependency **MCP server**, **GeoJSON/JSON export**, a **Python CLI** (`skills/atlas_cli.py`, includes SVG rendering), and Docker. See [`docs/API.md`](docs/API.md).
+**Bharat Itihaas** also works as a **historical-geography engine for LLMs, MCP clients and AI agents**: they never need to guess coordinates, and can ask for an era, a realm, a person or a point on the map.
 
-## Keyboard shortcuts and links
+- **Machine-Readable Specification**: [`llms.txt`](llms.txt)
+- **Zero-Dependency Local MCP Server (`stdio`)**: [`scripts/mcp_server.js`](scripts/mcp_server.js) — add it to Claude Desktop, Cursor, Windsurf or Gemini CLI `mcpServers`:
+  ```json
+  {
+    "mcpServers": {
+      "bharat-itihaas": {
+        "command": "node",
+        "args": ["/absolute/path/to/bharat-itihaas/scripts/mcp_server.js"]
+      }
+    }
+  }
+  ```
+  Exposes 7 offline tools (no npm dependencies):
+  - `list_eras()` and `get_era({ index? , year? })`: the 19 eras; narrative, realms, rulers, places and events of one era (by index, or by the nearest year, negative = BCE).
+  - `search({ query })`: search eras, realms, places, events, journeys and people.
+  - `trace_place({ lat, lon })`: which realm covered that point in each era.
+  - `list_people()`, `get_person({ id })` and `compare_people({ ids })`: person chronicles with stops, and lifespan overlap or gap.
+  - Smoke test: `node scripts/test_mcp.js`.
 
-| | |
+### Python CLI (standard library only)
+
+```bash
+python skills/atlas_cli.py eras
+python skills/atlas_cli.py era 400              # by index or nearest year (negative = BCE)
+python skills/atlas_cli.py search nalanda
+python skills/atlas_cli.py trace 25.61 85.14    # which realm covered a point, in each era
+python skills/atlas_cli.py person akbar
+python skills/atlas_cli.py render 4 -o gupta.svg --lang hi
+```
+
+### Browser JavaScript API (`window.atlasAPI`)
+
+| Call | Returns |
 |---|---|
-| `/` | Search places, events and realms |
-| `←` `→` | Previous / next era |
-| `M` | Ambient music on or off |
-| `Esc` | Close a popup, the curtain or a journey |
-| `#era=14&lang=hi` | Open an era (0 to 18) in Hindi |
-| `#journey=maurya` | Start a journey (`maurya`, `travellers`, `chola`, `sultans`, `freedom`) |
-| `?intro=0` | Skip the title sequence |
+| `eras()` / `era(i)` / `goto(i)` | the era list; one era's narrative, realms, places, events; jump to an era |
+| `setLang('en'\|'hi')` / `state()` | switch language; `{era, lang, tour, journey, thenNow}` |
+| `search(q)` | `[{kind, era, name}]` (also opens the result list) |
+| `trace(lat, lon)` | which realms covered that point in each era |
+| `people()` / `showPerson(id)` / `compare([id, id])` | person chronicles |
+| `journeys()` / `startJourney(id)` / `stopJourney()` | the five cinematic journeys |
+| `thenNow(on)` | show or hide the Then & Now curtain |
+| `flyTo(lat, lon, zoom)` / `exportSVG(i?, lang?)` / `territory()` | move the map; the era as an SVG string; largest realm and rough area per era |
 
-## Run it locally
+Full reference: [`docs/API.md`](docs/API.md).
+
+---
+
+## Run Locally
+
+No dependencies or build steps required. Clone and serve with any static HTTP server:
 
 ```bash
 git clone https://github.com/kaulvishesh/bharat-itihaas.git
@@ -76,15 +217,42 @@ cd bharat-itihaas
 python -m http.server 8011
 ```
 
-Then open <http://localhost:8011> (internet needed for Leaflet and the map tiles). Nothing else to install: there is no build step.
+Then open `http://localhost:8011` in your browser (internet is needed for Leaflet and the map tiles).
 
-Docker (untested here): `docker compose up -d --build`, then open <http://localhost:8009>.
+## Run with Docker
 
-## Publish your own copy
+No local dependency needed. Build and start with Docker Compose (the author has not tested this setup):
 
-The site is fully static (relative paths), so it works from a GitHub Pages sub-path. Fork or push this repository, then in **Settings → Pages** set **Source: GitHub Actions**. The workflow in [`.github/workflows/pages.yml`](.github/workflows/pages.yml) validates the data, rebuilds the topic pages and sitemap with your real URL, and publishes the runtime files (everything except `scripts/`, `assets/`, `.github/` and the project docs) to `https://<user>.github.io/<repo>/`. [`ci.yml`](.github/workflows/ci.yml) runs the checks on every push and pull request.
+```bash
+docker compose up -d --build
+```
 
-## Repository structure
+Then open `http://localhost:8009` (the mapping `8009:80` is set in `docker-compose.yml`). The image is a plain `nginx:alpine` that serves the repository as static files; `.dockerignore` keeps the tooling out (`.git`, `.github`, `scripts/`, `assets/` and the Markdown files), since the site does not need them at runtime.
+
+## Publish Your Own Copy
+
+The site is fully static (relative paths), so it works from a GitHub Pages sub-path. Fork or push this repository, then in **Settings → Pages** set **Source: GitHub Actions**. [`pages.yml`](.github/workflows/pages.yml) validates the data, rebuilds the topic pages and sitemap with your real URL, and publishes the runtime files (everything except `scripts/`, `assets/`, `.github/` and the project docs) to `https://<user>.github.io/<repo>/`. [`ci.yml`](.github/workflows/ci.yml) runs the checks on every push and pull request.
+
+---
+
+## GeoJSON & Data Export (for Leaflet / MapLibre / QGIS)
+
+The app ships its boundaries as a script (`js/geo.js`). To use them elsewhere, generate standard RFC 7946 GeoJSON (EPSG:4326, lon/lat); the output is committed in `geojson/`:
+
+```bash
+node scripts/export_geojson.js      # geojson/NN-<snapshot>.geojson, one FeatureCollection per era, plus geojson/index.json
+node scripts/export_data.js         # data/atlas.json: eras, routes, people, rivers and works for non-JS tools
+```
+
+- `geojson/index.json` lists every era with its `year`, `name`, `polities` count and file.
+- Each feature is a realm polygon with `name`, `nameHi`, `color`, `approx`, `era` and `year`.
+- The topic pages (`topics/`, English and Hindi, with inline SVG maps), `sitemap.xml` and `robots.txt` are generated by `node scripts/build_topics.js --base https://YOUR-HOST/path/`.
+
+Historical borders are schematic approximations, not surveyed boundaries. The boundary data is GPL-3.0; see [Data Sources & License](#data-sources--license).
+
+---
+
+## Repository Structure
 
 ```text
 ├── index.html                 # the app page (strict Content-Security-Policy, no build step)
@@ -97,13 +265,13 @@ The site is fully static (relative paths), so it works from a GitHub Pages sub-p
 │   ├── core.js                # shared geometry/lookup helpers (browser and Node tools)
 │   ├── app.js · extras.js     # the app: map, timeline, panels, trace, people, API
 │   ├── routes.js · rivers.js · works.js · people.js · battles.js · detail.js · realm_notes.js · event_wiki.js   # map content
-│   ├── lod.js · declutter.js · icons.js · landmarks.js   # drawn places, label collision, the pictogram and landmark art
+│   ├── lod.js · declutter.js · icons.js · landmarks.js   # drawn places, label collision, pictogram and landmark art
 │   ├── journeys_data.js · journeys.js · voice.js · music.js   # cinematic journeys, narration, ambient music
 │   ├── intro.js · preintro.js · swipe.js   # title sequence, Then & Now curtain
 │   ├── terrain.js · wiki.js   # hillshade/relief/satellite surfaces, Wikipedia summaries
 │   └── sw-register.js
 ├── audio/                     # pre-rendered journey narration (Kokoro-82M) + manifest.json
-├── data/ · geojson/ · topics/ # generated exports and static topic pages (see Build tools)
+├── data/ · geojson/ · topics/ # generated exports and static topic pages
 ├── docs/API.md                # developer API, embed, MCP
 ├── skills/atlas_cli.py        # Python CLI (JSON lookup, SVG rendering)
 ├── scripts/                   # validation, exports, topic pages, narration and data builders
@@ -113,34 +281,55 @@ The site is fully static (relative paths), so it works from a GitHub Pages sub-p
 └── .github/                   # Pages deploy, CI checks, data-correction issue form
 ```
 
-## Data, credits and caveats
-
-- Boundaries come from [aourednik/historical-basemaps](https://github.com/aourednik/historical-basemaps) (GPL-3.0), snapshot years 500 BCE … 2010, filtered to South Asia and simplified by `scripts/build_geo.py` into `js/geo.js`. Each era names the snapshot it uses; snapshots are not always the era's exact year. The Maratha heartland at 1700 is a hand-drawn sketch (dashed).
-- Boundaries, routes and the positions of places are **approximate and for illustration only**; they are not authoritative and are not the Survey of India's official map. Present-day India (the 1960 and 2010 eras) is drawn as India officially shows itself, including all of Jammu & Kashmir and Ladakh, from Natural Earth's "India point of view" (`scripts/apply_india_claim.js`). That is an approximation, not the Survey of India's file; other outlines are as the data sources draw them.
-- Source names/polygons can be generic ("Hindu kingdoms"); some were relabelled by hand. Journey paths in `js/routes.js` are schematic polylines through known waypoints, not surveyed routes.
-- Hindi covers the whole interface, era and realm names, narratives, rulers, places, events and quiz clues. Hindi text was drafted with machine assistance and has not been reviewed by a native-speaker editor; the English narration is synthesised speech.
-- Map surfaces are open and keyless: the hillshade and Relief view are drawn in the browser from AWS Terrain Tiles (USGS/NOAA elevation, `js/terrain.js`); Satellite and the "today" side of Then & Now are NASA Blue Marble (500 m, so close zooms are soft). Both services are fine for light traffic; for heavy traffic host your own copy.
-
-Built on [historical-basemaps](https://github.com/aourednik/historical-basemaps) (boundaries, GPL-3.0),
-[Natural Earth](https://www.naturalearthdata.com) (coastlines, public domain), [Leaflet](https://leafletjs.com),
-public elevation data (USGS and NOAA, via AWS Terrain Tiles), NASA Blue Marble imagery, Wikipedia (CC BY-SA), and [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) (narration, Apache-2.0).
-The design language follows [jiangshan-map](https://github.com/DeanChensj/jiangshan-map). Every source and its licence is listed in [`NOTICE.md`](NOTICE.md).
-
-## Build tools
-
-All optional; the outputs are already committed.
+Build tools, all optional (the outputs are already committed):
 
 ```bash
 node scripts/validate.js            # data integrity checks (Hindi coverage, coordinates, sorting, ...)
-node scripts/export_geojson.js      # geojson/ (one file per era)
-node scripts/export_data.js         # data/atlas.json (for the Python CLI)
-node scripts/build_topics.js --base https://YOUR-HOST/path/   # topics/, sitemap.xml, robots.txt
-node scripts/test_mcp.js            # MCP server smoke test
-NARRATION_MODULES=/path/to/tools node scripts/make_narration.js   # re-render the Journeys' English narration clips (audio/); see the header of that file
+NARRATION_MODULES=/path/to/tools node scripts/make_narration.js   # re-render the journeys' English narration clips (audio/); see the header of that file
 python -I scripts/build_geo.py <raw_dir> js/geo.js    # rebuild boundaries from the raw GeoJSON (then run scripts/apply_india_claim.js)
-python skills/atlas_cli.py render 4 -o gupta.svg
 ```
 
-After editing `js/data.js`, run `validate.js`, then the first three exports so the static outputs stay in sync. If you edit a Journey caption (`js/journeys_data.js`) re-run `make_narration.js`; until then that caption falls back to the browser voice. When you change any JS/CSS, bump the `?v=` number in `index.html` **and** `sw.js` together so the service worker refreshes. See [CONTRIBUTING.md](CONTRIBUTING.md).
+After editing `js/data.js`, run `validate.js`, then the exports above so the static outputs stay in sync. If you edit a journey caption (`js/journeys_data.js`) re-run `make_narration.js`; until then that caption falls back to the browser voice. When you change any JS/CSS, bump the `?v=` number in `index.html` **and** `sw.js` together so the service worker refreshes. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Released under the **GNU General Public License v3.0**, see [`LICENSE`](LICENSE).
+---
+
+## Data Sources & License
+
+Code and the data created by this project are released under **GPL-3.0**.
+
+| Layer | Source | License |
+| :-- | :-- | :-- |
+| Code (app, scripts, CLI, MCP server) | This project | GPL-3.0 |
+| Historical boundaries (`js/geo.js`, `geojson/`) | Simplified from [aourednik/historical-basemaps](https://github.com/aourednik/historical-basemaps), then relabelled and edited by hand | GPL-3.0 |
+| Present-day India (the 1960 and 2010 eras) | Redrawn by `scripts/apply_india_claim.js` from [Natural Earth](https://www.naturalearthdata.com) 10m countries, India point of view | Public domain |
+| Coastline (`js/land.js`) | Natural Earth 50m land | Public domain |
+| Eras, places, events, routes, people, journeys, Hindi text | Compiled by this project | GPL-3.0 |
+| Landmark and pictogram art (`js/landmarks.js`, `js/icons.js`) | Drawn for this project | GPL-3.0 |
+| Ambient music (`js/music.js`) | Synthesised live in the browser; no recordings or samples | GPL-3.0 |
+| Journey narration (`audio/en/`) | Synthesised with [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M); generated speech, not a recording of a person | Apache-2.0 (model and code) |
+| Hillshade and Relief base map | Drawn in the browser from [AWS Terrain Tiles](https://registry.opendata.aws/terrain-tiles/) (SRTM and GMTED2010 from the US Geological Survey, ETOPO1 from NOAA) | Public domain; credit shown on the map |
+| Satellite view, "today" side of Then & Now | [NASA Blue Marble](https://visibleearth.nasa.gov/collection/1484/blue-marble) via NASA GIBS | NASA data, no restrictions; credit shown |
+| Map engine | [Leaflet](https://leafletjs.com) 1.9.4 from cdnjs, with Subresource Integrity | BSD-2-Clause |
+| Event photos and summaries | Wikipedia, fetched live when a popup opens | CC BY-SA 4.0 (credit in each popup) |
+| Fonts | Cormorant Garamond, Cinzel, Noto Serif/Sans (+ Devanagari), Amita; self-hosted in `fonts/` | SIL Open Font License 1.1 |
+| Design language | [jiangshan-map](https://github.com/DeanChensj/jiangshan-map) (palette structure, docked panel, banded timeline) | GPL-3.0 |
+
+The full list, with links, is in [`NOTICE.md`](NOTICE.md).
+
+**Approximate boundaries.** Boundaries, routes, rivers and the positions of drawn places are schematic approximations, not surveyed borders; they are for illustration only and are not authoritative or the Survey of India's official map. Do not cite them as precise.
+
+**Present-day India.** The 1960 and 2010 eras draw India as India officially shows itself, including all of Jammu & Kashmir and Ladakh, from Natural Earth's "India point of view". That is an approximation, not the Survey of India's own file, and may differ in small details; other outlines are as the data sources draw them.
+
+**Hindi and narration.** Hindi text was drafted with machine assistance and has not been reviewed by a native-speaker editor; corrections are welcome. The English narration is machine-generated speech.
+
+**Privacy.** No analytics, cookies or tracking (your browser keeps only your music choice, plus a note for the current session that you have seen the intro). Fonts are self-hosted; the page contacts only its own host, cdnjs (Leaflet), AWS and NASA (map surfaces) and Wikipedia/Wikimedia (popups, only when you open one).
+
+**Reusing this project.** Credit **Bharat Itihaas** with a link to https://github.com/kaulvishesh/bharat-itihaas, and cite the upstream sources above.
+
+**Rights holders.** If you hold rights in any material here and believe it is used improperly, please [open an issue](https://github.com/kaulvishesh/bharat-itihaas/issues); we will respond and remove it if needed.
+
+**Contributing**: see [CONTRIBUTING.md](CONTRIBUTING.md) for repository structure, data conventions and checks.
+
+**Report a data error**: found a wrong year, place or description? [Open a data correction issue](https://github.com/kaulvishesh/bharat-itihaas/issues/new?template=data-error.yml) and cite a source if you can.
+
+Licensed under GPL-3.0 (see [LICENSE](LICENSE)).
