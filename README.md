@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://kaulvishesh.github.io/bharat-itihaas/">
-    <img src="assets/intro.jpg" alt="Bharat Itihaas — the opening title sequence: the subcontinent inked onto the page, trade roads lighting up between great cities" width="100%" />
+    <img src="assets/hero.webp" alt="Bharat Itihaas in 25 seconds: the opening title sequence, the Bodh Gaya scene of The Emperor Who Wept with the Bodhi tree, the Buddha and the Mahabodhi temple drawn on the map, and the Then and Now satellite curtain over the Mughal era" width="100%" />
   </a>
 </p>
 
@@ -63,6 +63,7 @@ Click **✦ Journeys** in the header (or open a link below). The map takes the w
 - **Illustrated Landmarks Drawn on the Map**: the Bodhi tree with the seated Buddha and the Mahabodhi temple, Nalanda's brick monasteries, Ashoka's lion pillar, the Brihadisvara vimana, the Qutb Minar, the Taj Mahal and the Red Fort. They also appear as engraved plates in those events' popups.
 - **Narration** (🔊): pre-rendered neural speech ([Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M)) in English, and the best voice installed on your device for Hindi.
 - **Ambient Music** (♪, or press `M`): a tanpura-style drone with slow raga phrases that follow the era (Bhoopali, Yaman, Bhairavi, Bhairav; each journey has its own), synthesised live in your browser with the Web Audio API — no audio files. Off until you switch it on, remembered once chosen, ducks under narration, pauses when the tab is hidden.
+- **Share**: the end card of every journey has a Share button (phones open the share sheet, desktops copy the link), and the **Layers → Share** menu item copies the current view. Shared links unfurl with a preview card on WhatsApp, X, Reddit, LinkedIn and Slack.
 - **Take the Map Back Any Time**: pause and drag or zoom freely; `←` `→` `Space` `Esc` work. There is also a **full guided tour** of all 93 steps in the Journeys menu.
 
 > [Try It Live: The Emperor Who Wept →](https://kaulvishesh.github.io/bharat-itihaas/#journey=maurya)
@@ -275,7 +276,8 @@ Historical borders are schematic approximations, not surveyed boundaries. The bo
 ├── docs/API.md                # developer API, embed, MCP
 ├── skills/atlas_cli.py        # Python CLI (JSON lookup, SVG rendering)
 ├── scripts/                   # validation, exports, topic pages, narration and data builders
-├── assets/                    # README screenshots (not part of the deployed site)
+├── social/preview.jpg         # the 1200x630 link-preview card named in index.html's og:image / twitter:image
+├── assets/                    # README banner and screenshots (not part of the deployed site)
 ├── NOTICE.md · LICENSE        # every source and its licence · GPL-3.0
 ├── Dockerfile · docker-compose.yml
 └── .github/                   # Pages deploy, CI checks, data-correction issue form
@@ -287,7 +289,10 @@ Build tools, all optional (the outputs are already committed):
 node scripts/validate.js            # data integrity checks (Hindi coverage, coordinates, sorting, ...)
 NARRATION_MODULES=/path/to/tools node scripts/make_narration.js   # re-render the journeys' English narration clips (audio/); see the header of that file
 python -I scripts/build_geo.py <raw_dir> js/geo.js    # rebuild boundaries from the raw GeoJSON (then run scripts/apply_india_claim.js)
+SOCIAL_MODULES=/path/to/tools node scripts/make_social.js   # re-render social/preview.jpg and assets/hero.webp from the running app (needs a local server and Edge/Chrome; setup in the header of that file)
 ```
+
+If you host your own copy, change the three `kaulvishesh.github.io` addresses in the link-preview tags at the top of `index.html` (they must be absolute).
 
 After editing `js/data.js`, run `validate.js`, then the exports above so the static outputs stay in sync. If you edit a journey caption (`js/journeys_data.js`) re-run `make_narration.js`; until then that caption falls back to the browser voice. When you change any JS/CSS, bump the `?v=` number in `index.html` **and** `sw.js` together so the service worker refreshes. See [CONTRIBUTING.md](CONTRIBUTING.md).
 

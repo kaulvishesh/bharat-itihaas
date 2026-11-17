@@ -20,12 +20,12 @@
     en: {
       name: 'Journeys', pick: 'Choose a journey', sub: 'Pick a story and sit back. The map does the rest.', full: 'The full tour', fullD: 'Every era and every event, in order.', allEras: (n) => 'All ' + n + ' eras', scenes: (n, m) => n + ' scenes · about ' + m + ' min',
       prev: 'Previous scene', next: 'Next scene', pause: 'Pause', resume: 'Resume', exit: 'Exit', narrate: 'Narrate aloud', fin: 'The journey ends', finD: 'Pick another journey, or take the map into your own hands.',
-      replay: 'Replay', more: 'More journeys', explore: 'Explore the map', close: 'Close', of: (n, m) => n + ' / ' + m, bce: 'BCE', ce: 'CE', lang: 'हिन्दी', hint: 'Paused. Drag and zoom the map freely.'
+      replay: 'Replay', share: 'Share', shareText: 'A short cinematic journey through Indian history, on a living map.', more: 'More journeys', explore: 'Explore the map', close: 'Close', of: (n, m) => n + ' / ' + m, bce: 'BCE', ce: 'CE', lang: 'हिन्दी', hint: 'Paused. Drag and zoom the map freely.'
     },
     hi: {
       name: 'यात्राएँ', pick: 'एक यात्रा चुनें', sub: 'एक कहानी चुनें और आराम से बैठें। नक़्शा बाक़ी सब करेगा।', full: 'पूरी यात्रा', fullD: 'हर युग, हर घटना, क्रम से।', allEras: (n) => 'सभी ' + n + ' युग', scenes: (n, m) => n + ' दृश्य · लगभग ' + m + ' मिनट',
       prev: 'पिछला दृश्य', next: 'अगला दृश्य', pause: 'रोकें', resume: 'चलाएँ', exit: 'बाहर', narrate: 'बोलकर सुनाएँ', fin: 'यात्रा समाप्त', finD: 'कोई और यात्रा चुनें, या नक़्शा अपने हाथ में लें।',
-      replay: 'फिर से', more: 'और यात्राएँ', explore: 'नक़्शा देखें', close: 'बंद करें', of: (n, m) => n + ' / ' + m, bce: 'ई.पू.', ce: 'ई.', lang: 'English', hint: 'रुका हुआ है। नक़्शे को खींचें और ज़ूम करें।'
+      replay: 'फिर से', share: 'साझा करें', shareText: 'भारत के इतिहास की एक छोटी सिनेमाई यात्रा, एक जीवंत नक़्शे पर।', more: 'और यात्राएँ', explore: 'नक़्शा देखें', close: 'बंद करें', of: (n, m) => n + ' / ' + m, bce: 'ई.पू.', ce: 'ई.', lang: 'English', hint: 'रुका हुआ है। नक़्शे को खींचें और ज़ूम करें।'
     }
   };
   const U = () => UI[hi() ? 'hi' : 'en'];
@@ -181,9 +181,10 @@
   function jump(k) { if (!S.on) return; S.n = k; S.ending = false; showBeat(false); }
   function paintEnd() {
     el.year.textContent = ''; el.h.textContent = U().fin; el.p.textContent = U().finD;
-    el.end.innerHTML = '<button type="button" class="cine-cta" data-e="replay">' + escapeHtml(U().replay) + '</button><button type="button" class="cine-cta" data-e="more">' + escapeHtml(U().more) + '</button><button type="button" class="cine-cta pri" data-e="explore">' + escapeHtml(U().explore) + '</button>';
+    el.end.innerHTML = '<button type="button" class="cine-cta" data-e="replay">' + escapeHtml(U().replay) + '</button><button type="button" class="cine-cta" data-e="share">' + escapeHtml(U().share) + '</button><button type="button" class="cine-cta" data-e="more">' + escapeHtml(U().more) + '</button><button type="button" class="cine-cta pri" data-e="explore">' + escapeHtml(U().explore) + '</button>';
     el.end.querySelectorAll('button').forEach((b) => b.addEventListener('click', () => {
       const a = b.dataset.e;
+      if (a === 'share') { A.share(location.origin + location.pathname + '#journey=' + S.j.id + '&lang=' + (hi() ? 'hi' : 'en'), tx(S.j, 't') + ' · ' + (hi() ? 'भारत इतिहास' : 'Bharat Itihaas'), U().shareText); return; }
       if (a === 'replay') { S.n = 0; S.y = null; S.ending = false; showBeat(false); } else if (a === 'more') stop(true); else stop(false);
     }));
   }

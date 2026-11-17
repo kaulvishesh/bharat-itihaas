@@ -732,11 +732,14 @@
   $('btnReset').addEventListener('click', () => flyHome(0.8));
   $('btnTour').addEventListener('click', () => (tour.on ? stopTour() : startTour()));
   $('btnQuiz').addEventListener('click', () => (state.quiz ? endQuiz() : startQuiz()));
-  $('btnShare').addEventListener('click', () => {
-    const url = location.href;
+  // phones get the system share sheet (WhatsApp, Instagram, ...); desktops copy the link
+  function shareLink(url, title, text) {
+    const touch = !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+    if (navigator.share && touch) { navigator.share({ url, title, text }).catch(() => { /* dismissed */ }); return; }
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(() => toast(t().copied), () => toast(url));
     else toast(url);
-  });
+  }
+  $('btnShare').addEventListener('click', () => shareLink(location.href, document.title, document.querySelector('meta[name=description]').content));
   $('btnLang').addEventListener('click', () => {
     state.lang = hi() ? 'en' : 'hi'; applyLang(); buildIndex();
     if (state.quiz) { quizLayer.clearLayers(); quizRound(); }
@@ -758,7 +761,7 @@
     startTour: () => { if (!tour.on) startTour(); }, stopTour: () => { if (tour.on) stopTour(); },
     search: (q) => { runSearch(q); return ($('results')._top || []).map((x) => ({ kind: x.k, era: x.i, name: x.o[x.f] })); },
     mute, traceBtn, wikiSlot, POP, selectRealm, clearRealm, focusPoly, getPoly: (i) => polyById[i], realm: () => state.realm,
-    toast, stopPlay, renderTimeline, isBusy: () => !!(state.quiz || tour.on)
+    toast, share: shareLink, stopPlay, renderTimeline, isBusy: () => !!(state.quiz || tour.on)
   };
 
   // deep link: #era=3&lang=hi
