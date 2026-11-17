@@ -1,4 +1,6 @@
-# Atlas of India
+# Atlas of India (Bharat Itihaas)
+
+**Live: <https://kaulvishesh.github.io/bharat-itihaas/>** · source: <https://github.com/kaulvishesh/bharat-itihaas>
 
 An interactive historical map of India, inspired by [jiangshan-map](https://github.com/DeanChensj/jiangshan-map).
 A fresh, lightweight codebase (Leaflet + vanilla JS, no build step) — not a patched copy of the China app.
