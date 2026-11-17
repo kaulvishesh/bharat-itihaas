@@ -1,0 +1,5 @@
+# large reference/raw inputs are not needed to run or deploy the site
+upstream/
+raw-data/
+node_modules/
+.claude/

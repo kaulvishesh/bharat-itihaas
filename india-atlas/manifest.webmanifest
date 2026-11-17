@@ -1,0 +1,12 @@
+{
+  "name": "Atlas of India",
+  "short_name": "Atlas of India",
+  "description": "Interactive historical atlas of India, 500 BCE to today, in English and Hindi.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fbf6ea",
+  "theme_color": "#c2410c",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

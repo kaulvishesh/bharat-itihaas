@@ -1,0 +1,6 @@
+services:
+  atlas-of-india:
+    build: .
+    ports:
+      - "8009:80"
+    restart: unless-stopped

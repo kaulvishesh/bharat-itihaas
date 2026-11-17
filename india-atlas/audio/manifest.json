@@ -1,0 +1,126 @@
+{
+ "voice": "Kokoro-82M v1.0 (af_heart), Apache-2.0",
+ "rate": 24000,
+ "clips": {
+  "maurya-0": {
+   "en": "a06fc909",
+   "s": 14.3
+  },
+  "maurya-1": {
+   "en": "aae22a5d",
+   "s": 13.5
+  },
+  "maurya-2": {
+   "en": "c128e817",
+   "s": 16.3
+  },
+  "maurya-3": {
+   "en": "ee1e8aa1",
+   "s": 13.4
+  },
+  "maurya-4": {
+   "en": "7815fc62",
+   "s": 16.2
+  },
+  "maurya-5": {
+   "en": "f7cf10e9",
+   "s": 14.6
+  },
+  "maurya-6": {
+   "en": "ca539b34",
+   "s": 14.1
+  },
+  "travellers-0": {
+   "en": "a8fc041d",
+   "s": 13.4
+  },
+  "travellers-1": {
+   "en": "2943faa9",
+   "s": 13.6
+  },
+  "travellers-2": {
+   "en": "d89cb504",
+   "s": 16.2
+  },
+  "travellers-3": {
+   "en": "3bd66022",
+   "s": 15.6
+  },
+  "travellers-4": {
+   "en": "14192032",
+   "s": 14.3
+  },
+  "travellers-5": {
+   "en": "e96d29c3",
+   "s": 15.2
+  },
+  "chola-0": {
+   "en": "7c312fa3",
+   "s": 14.5
+  },
+  "chola-1": {
+   "en": "6547c7e0",
+   "s": 14.2
+  },
+  "chola-2": {
+   "en": "6161b7c9",
+   "s": 15.7
+  },
+  "chola-3": {
+   "en": "57758c7b",
+   "s": 15.6
+  },
+  "chola-4": {
+   "en": "dff94fa5",
+   "s": 14.3
+  },
+  "sultans-0": {
+   "en": "ca18b630",
+   "s": 14.4
+  },
+  "sultans-1": {
+   "en": "5a0be9a3",
+   "s": 15.6
+  },
+  "sultans-2": {
+   "en": "683f919b",
+   "s": 17.2
+  },
+  "sultans-3": {
+   "en": "c2ab9c6b",
+   "s": 15.2
+  },
+  "sultans-4": {
+   "en": "68f4a7eb",
+   "s": 15.4
+  },
+  "sultans-5": {
+   "en": "14e35a16",
+   "s": 13
+  },
+  "freedom-0": {
+   "en": "b8afc30e",
+   "s": 15.1
+  },
+  "freedom-1": {
+   "en": "68a5872a",
+   "s": 14.6
+  },
+  "freedom-2": {
+   "en": "1485f930",
+   "s": 16.3
+  },
+  "freedom-3": {
+   "en": "524222ab",
+   "s": 15.4
+  },
+  "freedom-4": {
+   "en": "89d50928",
+   "s": 15.4
+  },
+  "freedom-5": {
+   "en": "4aa5b08a",
+   "s": 14.8
+  }
+ }
+}

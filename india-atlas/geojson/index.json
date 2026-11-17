@@ -1,0 +1,135 @@
+[
+  {
+    "index": 0,
+    "file": "00-bc500.geojson",
+    "year": -500,
+    "name": "The Mahajanapadas",
+    "polities": 5
+  },
+  {
+    "index": 1,
+    "file": "01-bc300.geojson",
+    "year": -300,
+    "name": "Rise of the Mauryas",
+    "polities": 5
+  },
+  {
+    "index": 2,
+    "file": "02-bc200.geojson",
+    "year": -250,
+    "name": "Maurya Empire under Ashoka",
+    "polities": 4
+  },
+  {
+    "index": 3,
+    "file": "03-100.geojson",
+    "year": 100,
+    "name": "Kushans, Satavahanas & the Roman trade",
+    "polities": 8
+  },
+  {
+    "index": 4,
+    "file": "04-400.geojson",
+    "year": 400,
+    "name": "Gupta Empire",
+    "polities": 5
+  },
+  {
+    "index": 5,
+    "file": "05-500.geojson",
+    "year": 500,
+    "name": "After the Guptas: Hunas & new kingdoms",
+    "polities": 11
+  },
+  {
+    "index": 6,
+    "file": "06-600.geojson",
+    "year": 640,
+    "name": "Harsha, Chalukyas & Pallavas",
+    "polities": 9
+  },
+  {
+    "index": 7,
+    "file": "07-800.geojson",
+    "year": 800,
+    "name": "The Tripartite Struggle",
+    "polities": 10
+  },
+  {
+    "index": 8,
+    "file": "08-900.geojson",
+    "year": 900,
+    "name": "Pratihara zenith & the Chola revival",
+    "polities": 19
+  },
+  {
+    "index": 9,
+    "file": "09-1000.geojson",
+    "year": 1030,
+    "name": "Chola Empire at its peak",
+    "polities": 10
+  },
+  {
+    "index": 10,
+    "file": "10-1200.geojson",
+    "year": 1206,
+    "name": "Founding of the Delhi Sultanate",
+    "polities": 6
+  },
+  {
+    "index": 11,
+    "file": "11-1300.geojson",
+    "year": 1335,
+    "name": "Tughlaqs & the birth of Vijayanagara",
+    "polities": 8
+  },
+  {
+    "index": 12,
+    "file": "12-1530.geojson",
+    "year": 1526,
+    "name": "Vijayanagara, Deccan Sultanates & the dawn of the Mughals",
+    "polities": 11
+  },
+  {
+    "index": 13,
+    "file": "13-1650.geojson",
+    "year": 1650,
+    "name": "Shah Jahan's empire & the Deccan sultanates",
+    "polities": 11
+  },
+  {
+    "index": 14,
+    "file": "14-1700.geojson",
+    "year": 1700,
+    "name": "Mughal Empire at its largest",
+    "polities": 6
+  },
+  {
+    "index": 15,
+    "file": "15-1783.geojson",
+    "year": 1783,
+    "name": "Marathas, Mysore & the Company",
+    "polities": 20
+  },
+  {
+    "index": 16,
+    "file": "16-1900.geojson",
+    "year": 1900,
+    "name": "British Raj",
+    "polities": 5
+  },
+  {
+    "index": 17,
+    "file": "17-1960.geojson",
+    "year": 1950,
+    "name": "Independence & the Republic",
+    "polities": 6
+  },
+  {
+    "index": 18,
+    "file": "18-2010.geojson",
+    "year": 2010,
+    "name": "South Asia today",
+    "polities": 7
+  }
+]

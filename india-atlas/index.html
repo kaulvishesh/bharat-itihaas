@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas of India — Interactive Historical Map</title>
+<meta name="description" content="Scrub through 2,500 years of Indian history: empires, journeys, events and places from the Mahajanapadas to today.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://cdnjs.cloudflare.com https://server.arcgisonline.com https://tile.openstreetmap.org https://upload.wikimedia.org; connect-src 'self' https://en.wikipedia.org https://hi.wikipedia.org; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#1c2540">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Cinzel:wght@500;600;700&family=Noto+Serif:wght@400;600;700&family=Noto+Serif+Devanagari:wght@400;600;700&family=Noto+Sans:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&family=Amita:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="css/style.css?v=56">
+<link rel="stylesheet" href="css/wow.css?v=56">
+<script src="js/preintro.js?v=56"></script>
+</head>
+<body>
+<div id="intro" class="intro"></div>
+<div id="atlas-shell">
+  <header id="nav-bar">
+    <div class="brand-group">
+      <h1><span class="seal-mark" aria-hidden="true">भारत</span><span class="subtitle-mark" id="subtitle"></span><span class="sr-only" id="title">Atlas of India</span></h1>
+    </div>
+    <div class="control-strip">
+      <button id="btnTour" class="pill-btn" type="button"></button>
+      <button id="btnPeople" class="pill-btn" type="button"></button>
+      <button id="btnTrace" class="pill-btn" type="button"></button>
+      <span class="toolbar-divider" aria-hidden="true"></span>
+      <div class="more">
+        <button id="btnMore" class="pill-btn" type="button" aria-haspopup="true" aria-expanded="false"><span id="moreLabel">Layers</span><span class="caret-mark" aria-hidden="true">▾</span></button>
+        <div id="moreMenu" class="menu" hidden>
+          <button id="btnChart" type="button"></button>
+          <button id="btnRivers" type="button"></button>
+          <button id="btnWorks" type="button"></button>
+          <button id="btnQuiz" type="button"></button>
+          <button id="btnShare" type="button"></button>
+        </div>
+      </div>
+      <button id="btnLang" class="pill-btn" type="button" aria-label="Language">हिन्दी</button>
+    </div>
+  </header>
+
+  <main id="stage">
+    <section id="map-wrap">
+      <div id="map" aria-label="Map of India"></div>
+      <div class="search">
+        <input id="search" type="search" autocomplete="off" aria-label="Search">
+        <div id="results" hidden></div>
+      </div>
+      <aside id="legend" class="legend" aria-label="Realms"></aside>
+      <div id="frame" class="frame" aria-hidden="true"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
+      <div id="cartouche" class="cartouche" aria-live="polite"></div>
+      <div id="compass" class="compass" aria-hidden="true">
+        <svg viewBox="-60 -60 120 120"><circle r="46" fill="none" stroke="currentColor" stroke-width=".8"/><circle r="40" fill="none" stroke="currentColor" stroke-width=".5" stroke-dasharray="1.2 2.4"/>
+          <g fill="currentColor"><path d="M0-52 7-8 0 0-7-8z"/><path d="M0 52-7 8 0 0 7 8z" opacity=".55"/><path d="M-52 0-8-7 0 0-8 7z" opacity=".55"/><path d="M52 0 8 7 0 0 8-7z" opacity=".55"/></g>
+          <g fill="none" stroke="currentColor" stroke-width=".7"><path d="M0-30 6-6 30 0 6 6 0 30-6 6-30 0-6-6z" transform="rotate(45)"/></g>
+          <circle r="3" fill="#f4ecd8" stroke="currentColor" stroke-width=".8"/><text y="-55" text-anchor="middle" font-family="Cinzel,serif" font-size="9" font-weight="700" fill="#f4ecd8">N</text></svg>
+      </div>
+      <div id="yearBig" class="yearbig" aria-hidden="true"></div>
+      <div id="quizBox" class="quiz" hidden></div>
+      <div id="tourBox" class="quiz tour" hidden></div>
+      <div id="toast" class="toast" role="status"></div>
+      <button id="btnReset" class="reset-btn" type="button"></button>
+    </section>
+    <aside id="panel" class="panel"></aside>
+    <aside id="sheet" class="sheet" hidden></aside>
+  </main>
+
+  <footer id="dock">
+    <div class="dock-row">
+      <button id="btnPlay" class="play-btn" type="button" aria-label="Play"></button>
+      <div class="tl-wrap">
+        <div id="tlTip" class="tl-tip" aria-hidden="true"></div>
+        <nav id="timeline" class="tl" aria-label="Timeline"></nav>
+        <div id="tlAxis" class="tl-axis" aria-hidden="true"></div>
+      </div>
+      <div class="yearbox">
+        <button id="btnPrev" type="button" aria-label="Previous era">‹</button>
+        <span id="yearBox" aria-live="polite"></span>
+        <button id="btnNext" type="button" aria-label="Next era">›</button>
+      </div>
+    </div>
+    <p class="disclaimer" id="disclaimer"></p>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/data.js?v=56"></script>
+<script src="js/data_hi.js?v=56"></script>
+<script src="js/geo.js?v=56"></script>
+<script src="js/icons.js?v=56"></script>
+<script src="js/land.js?v=56"></script>
+<script src="js/detail.js?v=56"></script>
+<script src="js/realm_notes.js?v=56"></script>
+<script src="js/routes.js?v=56"></script>
+<script src="js/people.js?v=56"></script>
+<script src="js/rivers.js?v=56"></script>
+<script src="js/works.js?v=56"></script>
+<script src="js/core.js?v=56"></script>
+<script src="js/event_wiki.js?v=56"></script>
+<script src="js/battles.js?v=56"></script>
+<script src="js/landmarks.js?v=56"></script>
+<script src="js/app.js?v=56"></script>
+<script src="js/extras.js?v=56"></script>
+<script src="js/lod.js?v=56"></script>
+<script src="js/wiki.js?v=56"></script>
+<script src="js/declutter.js?v=56"></script>
+<script src="js/voice.js?v=56"></script>
+<script src="js/journeys_data.js?v=56"></script>
+<script src="js/journeys.js?v=56"></script>
+<script src="js/swipe.js?v=56"></script>
+<script src="js/intro.js?v=56"></script>
+<script src="js/sw-register.js?v=56"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "atlas-narration-build",
+  "private": true,
+  "description": "Build-time tools for scripts/make_narration.js (not needed to run the atlas)",
+  "dependencies": {
+    "kokoro-js": "1.2.1",
+    "@breezystack/lamejs": "1.2.7"
+  }
+}
