@@ -413,7 +413,7 @@
       name: 'South Asia today', nameHi: 'आज का दक्षिण एशिया',
       tag: 'Seven decades on: India, Pakistan, Bangladesh and their neighbours.',
       tagHi: 'सात दशक बाद: भारत, पाकिस्तान, बांग्लादेश और उनके पड़ोसी।',
-      story: 'Bangladesh emerged in 1971 after a war of liberation. India liberalised its economy in 1991, and since then services and technology have grown rapidly; the country has also seen new states created (Chhattisgarh, Jharkhand, Uttarakhand in 2000; Telangana in 2014). Several land and maritime boundaries, notably in Kashmir and along the Himalayan frontier, remain disputed or undemarcated; this map takes no position on them.',
+      story: 'Bangladesh emerged in 1971 after a war of liberation. India liberalised its economy in 1991, and since then services and technology have grown rapidly; the country has also seen new states created (Chhattisgarh, Jharkhand, Uttarakhand in 2000; Telangana in 2014). Present-day outlines on this map are approximate; India is drawn as India officially depicts itself, including all of Jammu & Kashmir and Ladakh.',
       rulers: ['Constitution of India (1950)', 'Parliamentary democracy with a federal structure', '28 states and 8 union territories (2020)'],
       places: [
         { n: 'New Delhi', ll: [28.614, 77.209], k: 'capital', note: 'Capital of India' },

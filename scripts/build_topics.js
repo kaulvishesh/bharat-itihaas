@@ -17,13 +17,13 @@ const T = {
   en: {
     dir: 'ltr', home: 'Atlas of India', topics: 'Topics', eras: 'Eras', people: 'People', open: 'Open on the interactive map',
     realms: 'Realms', rulers: 'Rulers and figures', events: 'Key events', places: 'Places', journeys: 'Journeys and campaigns', stops: 'Stops',
-    disc: 'Boundaries are simplified and approximate, for illustration only. Data derived from historical-basemaps (GPL-3.0).', other: 'हिन्दी में पढ़ें',
+    disc: 'Boundaries are simplified and approximate, for illustration only. India’s present-day outline follows India’s official position (Natural Earth, India point of view). Data derived from historical-basemaps (GPL-3.0).', other: 'हिन्दी में पढ़ें',
     snapshot: (s) => 'Boundary snapshot: ' + s + '.'
   },
   hi: {
     dir: 'ltr', home: 'भारत का मानचित्र-इतिहास', topics: 'विषय', eras: 'युग', people: 'व्यक्तित्व', open: 'इंटरैक्टिव नक्शे पर खोलें',
     realms: 'राज्य', rulers: 'शासक और व्यक्तित्व', events: 'प्रमुख घटनाएँ', places: 'स्थान', journeys: 'यात्राएँ और अभियान', stops: 'पड़ाव',
-    disc: 'सीमाएँ सरलीकृत और अनुमानित हैं, केवल चित्रण हेतु। डेटा historical-basemaps (GPL-3.0) से।', other: 'Read in English',
+    disc: 'सीमाएँ सरलीकृत और अनुमानित हैं, केवल चित्रण हेतु। भारत की वर्तमान रूपरेखा भारत की आधिकारिक स्थिति के अनुसार है (नेचुरल अर्थ, भारत का दृष्टिकोण)। डेटा historical-basemaps (GPL-3.0) से।', other: 'Read in English',
     snapshot: (s) => 'सीमा-स्नैपशॉट: ' + s + '।'
   }
 };

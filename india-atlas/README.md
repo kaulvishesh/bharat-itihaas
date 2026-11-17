@@ -27,7 +27,7 @@ The site is fully static (relative paths, no build step), so it works from a Git
 1. In the folder that contains `india-atlas/` and `scripts/`: `git init`, commit, and push to a new GitHub repository (branch `main`).
 2. In the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 3. The included workflow `.github/workflows/pages.yml` validates the data, rebuilds the topic pages and sitemap with your real URL, and publishes `india-atlas/` to `https://<user>.github.io/<repo>/`.
-Notes: the large `upstream/` and `raw-data/` folders are git-ignored; map tiles come from Esri and fonts from Google, so check their terms for your traffic.
+Notes: the large `upstream/` and `raw-data/` folders are git-ignored; map tiles come from Esri (check their terms for your traffic); the fonts are self-hosted, so no visitor data goes to Google.
 
 ## Look and feel
 The visual system follows the design language of the original jiangshan-map (GPL-3.0): a warm parchment palette with a vermilion accent, serif body text with a sans-serif UI (Noto Serif / Noto Sans with Devanagari companions), a calligraphic seal mark (Amita) in the header, pill controls, hairline borders, a docked side panel with event cards, a floating legend card with era-progress dots, a sepia-toned relief basemap with an aged-paper vignette, muted watercolour-style realm fills, and a banded timeline coloured by each era's largest realm. Fonts load from Google Fonts.
@@ -51,9 +51,9 @@ Docker (untested here): `docker compose up -d --build`, then open http://localho
 ## Caveats
 - Borders are approximate; the source's names/polygons can be generic ("Hindu kingdoms") — some were relabelled by hand.
 - Hindi covers everything: UI, era and realm names, narratives, rulers, places, events and quiz clues (`js/data_hi.js`, aligned by index with `js/data.js` — keep them in sync when adding items). Translations are machine-drafted; a native-speaker review is recommended.
-- Basemap tiles come from Esri (World Shaded Relief / Imagery, attribution shown) and openstreetmap.org (Modern map option). Check each provider's terms and use a proper tile provider for production traffic.
+- Basemap tiles come from Esri (World Shaded Relief / Imagery, attribution shown). Check Esri's terms and use a keyed or open tile provider for production traffic.
 - Journey paths in `routes.js` are schematic polylines through known waypoints, not surveyed routes.
-- Disputed boundaries (e.g. Kashmir, Himalayan frontier) are shown as the source and OSM depict them; this project takes no position.
+- Present-day India (the 1960 and 2010 eras) is drawn as India officially depicts itself, including all of Jammu & Kashmir and Ladakh, from Natural Earth's "India point of view" data (`scripts/apply_india_claim.js`). That is an approximation, not the Survey of India's official map; other outlines are as the data sources draw them.
 - Licence: GPL-3.0 (see LICENSE), because it ships GPL-3.0-derived data.
 
 ## Build tools (all optional; outputs are already committed to the folder)

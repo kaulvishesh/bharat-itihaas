@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://your-host.example/atlas/sitemap.xml
+Sitemap: https://kaulvishesh.github.io/bharat-itihaas/sitemap.xml

@@ -7,4 +7,4 @@
 - GeoJSON export: node scripts/export_geojson.js -> geojson/ ; data export: node scripts/export_data.js -> data/atlas.json
 - Python CLI: python skills/atlas_cli.py (eras, era, search, trace, person, render)
 - Static topic pages: topics/ (English + Hindi), sitemap.xml, built by node scripts/build_topics.js
-- Boundaries are approximate and illustrative only. Data derived from aourednik/historical-basemaps (GPL-3.0).
+- Boundaries are approximate and illustrative only. Present-day India follows India's official position (Natural Earth, India point of view). Data derived from aourednik/historical-basemaps (GPL-3.0).

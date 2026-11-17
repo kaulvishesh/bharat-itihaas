@@ -57,12 +57,12 @@ your real URL and publishes the `india-atlas/` folder.
 ## Data, credits and caveats
 
 Boundaries, routes and the positions of places are **approximate and for illustration only**; they are not authoritative
-and take no position on any border. Hindi text was drafted with machine assistance and the English narration is
+and are not the Survey of India's official map. Present-day India is drawn as India officially shows itself (Natural Earth's "India point of view"). Hindi text was drafted with machine assistance and the English narration is
 synthesised speech.
 
 Built on [historical-basemaps](https://github.com/aourednik/historical-basemaps) (boundaries, GPL-3.0),
 [Natural Earth](https://www.naturalearthdata.com) (coastlines, public domain), [Leaflet](https://leafletjs.com),
-Esri and OpenStreetMap tiles, Wikipedia (CC BY-SA), and [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) (narration, Apache-2.0).
+Esri tiles, Wikipedia (CC BY-SA), and [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) (narration, Apache-2.0).
 The design language follows [jiangshan-map](https://github.com/DeanChensj/jiangshan-map). Every source and its licence is listed in
 [`india-atlas/NOTICE.md`](india-atlas/NOTICE.md).
 

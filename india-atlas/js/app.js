@@ -16,7 +16,7 @@
       rulers: 'Rulers & figures', realms: 'Realms', events: 'Key events', places: 'Places', journeys: 'Journeys & campaigns', trace: 'Trace',
       source: (snap) => 'Boundaries: data-source snapshot of ' + snap + ' (approximate).',
       approx: 'Dashed fill = hand-drawn sketch, very approximate.', ghost: 'Dashed grey outline = previous era.',
-      disclaimer: 'Boundaries are simplified, approximate and for illustration only; they are not authoritative and not for any political or legal purpose. Data: historical-basemaps (GPL-3.0).',
+      disclaimer: 'Boundaries are simplified, approximate and for illustration only; they are not authoritative and not for any political or legal purpose. India’s present-day outline follows India’s official position (Natural Earth, India point of view). Data: historical-basemaps (GPL-3.0).',
       cal: (ce, vs, sk) => 'Vikram Samvat ' + vs + (sk ? ' · Saka ' + sk : ''),
       calBce: 'Dates are approximate (BCE).',
       round: (r, n, s) => 'Round ' + r + ' of ' + n + ' · Score ' + s,
@@ -35,7 +35,7 @@
       rulers: 'शासक और व्यक्तित्व', realms: 'राज्य', events: 'प्रमुख घटनाएँ', places: 'स्थान', journeys: 'यात्राएँ और अभियान', trace: 'देखें',
       source: (snap) => 'सीमाएँ: डेटा-स्रोत का ' + snap + ' का स्नैपशॉट (अनुमानित)।',
       approx: 'धराशायी रंग = हाथ से बनाया गया अनुमानित रेखाचित्र।', ghost: 'धूसर धराशायी रेखा = पिछला युग।',
-      disclaimer: 'सीमाएँ सरलीकृत, अनुमानित और केवल चित्रण हेतु हैं; ये प्रामाणिक नहीं हैं और किसी राजनीतिक या कानूनी प्रयोजन के लिए नहीं हैं। डेटा: historical-basemaps (GPL-3.0)।',
+      disclaimer: 'सीमाएँ सरलीकृत, अनुमानित और केवल चित्रण हेतु हैं; ये प्रामाणिक नहीं हैं और किसी राजनीतिक या कानूनी प्रयोजन के लिए नहीं हैं। भारत की वर्तमान रूपरेखा भारत की आधिकारिक स्थिति के अनुसार है (नेचुरल अर्थ, भारत का दृष्टिकोण)। डेटा: historical-basemaps (GPL-3.0)।',
       cal: (ce, vs, sk) => 'विक्रम संवत ' + vs + (sk ? ' · शक ' + sk : ''),
       calBce: 'तिथियाँ अनुमानित (ई.पू.)।',
       round: (r, n, s) => 'दौर ' + r + '/' + n + ' · अंक ' + s,
@@ -74,9 +74,6 @@
   });
   const imagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri — Esri, Maxar, Earthstar Geographics', maxNativeZoom: 13, maxZoom: 13
-  });
-  const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', maxZoom: 19
   });
   // ── custom "antique atlas" basemap: engraved sea, water-lined coasts, shaded hills, graticule ──
   map.createPane('landPane').style.zIndex = 210;
@@ -132,7 +129,7 @@
   map.on('moveend zoomend layeradd', (ev) => { if (ev.type !== 'layeradd' || ev.layer === antique) updateGrid(); });
   antique.addTo(map);
   map.getContainer().classList.add('base-antique');
-  L.control.layers({ 'Antique atlas': antique, 'Relief': relief, 'Satellite': imagery, 'Modern map': osm }, null, { position: 'bottomright', collapsed: true }).addTo(map);
+  L.control.layers({ 'Antique atlas': antique, 'Relief': relief, 'Satellite': imagery }, null, { position: 'bottomright', collapsed: true }).addTo(map);
   map.on('baselayerchange', (ev) => {
     const c = map.getContainer();
     c.classList.toggle('base-relief', ev.layer === relief);
