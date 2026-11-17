@@ -312,6 +312,14 @@ The India data, the content in English and Hindi, the cinematic journeys, music 
 
 ---
 
+## Sources, AI Use and Corrections
+
+This atlas was **built with Claude Code** (an AI coding assistant), directed and tested by its author. The code, the era summaries, the event and place notes and the Hindi text were written with AI assistance from the model's general knowledge, not copied from particular books, and **have not been reviewed by a professional historian**. The illustrations on the map are original vector drawings generated as code; the photographs in popups come live from Wikimedia Commons with their own licences.
+
+To make it checkable, [**`docs/SOURCES.md`**](docs/SOURCES.md) (also [on the site](https://kaulvishesh.github.io/bharat-itihaas/sources.html)) lists the Wikipedia article behind every event, the results of an automated consistency check against those articles, standard reference works and primary texts to verify against, and the source of every dataset and image. Found a mistake? [Open a correction](https://github.com/kaulvishesh/bharat-itihaas/issues/new?template=data-error.yml) with a source.
+
+---
+
 ## Data Sources & License
 
 Code and the data created by this project are released under **GPL-3.0**.

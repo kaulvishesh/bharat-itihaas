@@ -71,6 +71,7 @@ html[lang='hi'] .subtitle-mark { letter-spacing: .04em; text-transform: none; fo
 .menu button:hover { background: var(--crimson-soft); }
 .menu a { display: flex; align-items: center; gap: 8px; padding: 9px 12px; border-radius: 6px; font-size: 13px; color: inherit; text-decoration: none; border-top: 1px solid var(--gold-soft); margin-top: 4px; }
 .menu a:hover, .menu a:focus-visible { background: var(--crimson-soft); }
+.menu a + a { border-top: 0; margin-top: 0; }
 .menu a svg { width: 15px; height: 15px; fill: currentColor; flex: none; }
 .p-foot a { color: inherit; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
 .p-foot .views { white-space: nowrap; } .p-foot .views::before { content: '· '; }

@@ -6,7 +6,7 @@
     'Battle of the Hydaspes': 'Battle of the Hydaspes', 'Chandragupta founds the Maurya dynasty': 'Chandragupta Maurya', 'Treaty with Seleucus Nicator': 'Seleucid–Mauryan war',
     'The Kalinga War': 'Kalinga War', 'Ashokan pillars and the Lion Capital': 'Lion Capital of Ashoka', 'Mahinda takes Buddhism to Sri Lanka': 'Mahinda (Buddhist monk)',
     'The Periplus describes Indian ports': 'Periplus of the Erythraean Sea', "Kanishka's reign begins": 'Kanishka', 'Gautamiputra Satakarni defeats the Shakas': 'Gautamiputra Satakarni',
-    'Junagadh inscription of Rudradaman': 'Junagadh rock inscription of Rudradaman I', 'The Iron Pillar of Delhi': 'Iron pillar of Delhi', 'Fa-Xian travels across India': 'Faxian',
+    'Junagadh inscription of Rudradaman': 'Junagadh rock inscription of Rudradaman', 'The Iron Pillar of Delhi': 'Iron pillar of Delhi', 'Fa-Xian travels across India': 'Faxian',
     'Nalanda mahavihara founded': 'Nalanda', 'Aryabhata writes the Aryabhatiya': 'Aryabhatiya', 'Hunas under Toramana in central India': 'Toramana', "Varahamihira's Panchasiddhantika": 'Pancha-Siddhantika',
     'Yashodharman defeats Mihirakula': 'Yashodharman', 'Chalukya power founded at Vatapi': 'Pulakeshin I', 'Pulakeshin II halts Harsha': 'Pulakeshin II', 'Xuanzang studies at Nalanda': 'Xuanzang',
     'Pallavas sack Vatapi': 'Narasimhavarman I', 'Rock-cut Mahabalipuram': 'Group of Monuments at Mahabalipuram', 'Arab conquest of Sindh': 'Umayyad campaigns in India',

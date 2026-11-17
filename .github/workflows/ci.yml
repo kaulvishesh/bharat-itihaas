@@ -26,4 +26,5 @@ jobs:
         run: |
           node scripts/export_geojson.js
           node scripts/export_data.js
-          git diff --exit-code -- geojson data || (echo "geojson/ or data/ is stale: run node scripts/export_geojson.js and node scripts/export_data.js, then commit" && exit 1)
+          node scripts/build_sources.js
+          git diff --exit-code -- geojson data sources.html docs/SOURCES.md || (echo "geojson/, data/ or the sources page is stale: run node scripts/export_geojson.js, node scripts/export_data.js and node scripts/build_sources.js, then commit" && exit 1)

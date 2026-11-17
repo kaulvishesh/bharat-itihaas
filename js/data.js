@@ -26,8 +26,8 @@
       ],
       events: [
         { year: -528, label: 'c. 528 BCE', title: 'Buddha attains enlightenment', text: 'Siddhartha Gautama attains enlightenment under the Bodhi tree at Bodh Gaya (traditional date), founding Buddhism.', place: 'Bodh Gaya', ll: [24.695, 84.991], clue: 'A fig tree here is where a prince from the Shakya clan is said to have become the Buddha.' },
-        { year: -518, label: 'c. 518 BCE', title: 'Achaemenid Persians take the Indus valley', text: 'Darius I incorporates Gandhara and the Indus region (Hindush) into the Persian Empire, opening a route for Aramaic-derived scripts.', place: 'Gandhara', ll: [34.0, 71.6], clue: 'A north-western region on the Kabul river that became a Persian satrapy around 518 BCE.' },
-        { year: -483, label: 'c. 483 BCE', title: 'First Buddhist Council', text: 'Held at Rajagriha, the Magadhan capital, soon after the Buddha\'s passing, to recite the teachings.', place: 'Rajagriha (Rajgir)', ll: [24.99, 85.42], clue: 'Hill-ringed capital of Bimbisara, where monks gathered to recite the Buddha\'s teachings.' },
+        { year: -518, label: 'c. 518–513 BCE', title: 'Achaemenid Persians take the Indus valley', text: 'Darius I incorporates Gandhara and the Indus region (Hindush) into the Persian Empire, opening a route for Aramaic-derived scripts.', place: 'Gandhara', ll: [34.0, 71.6], clue: 'A north-western region on the Kabul river that became a Persian satrapy around 518 BCE.' },
+        { year: -483, label: 'c. 483 BCE (traditional)', title: 'First Buddhist Council', text: 'Held at Rajagriha, the Magadhan capital, soon after the Buddha\'s passing, to recite the teachings.', place: 'Rajagriha (Rajgir)', ll: [24.99, 85.42], clue: 'Hill-ringed capital of Bimbisara, where monks gathered to recite the Buddha\'s teachings.' },
         { year: -400, label: 'c. 5th–4th c. BCE', title: 'Panini codifies Sanskrit', text: 'The grammarian Panini, from the Gandhara region, composes the Ashtadhyayi, among the most influential grammars ever written.', place: 'Shalatura (near Attock)', ll: [33.9, 72.3], clue: 'A grammarian from this north-western region wrote nearly 4,000 sutras defining Sanskrit.' }
       ]
     },
@@ -201,7 +201,7 @@
       ],
       events: [
         { year: 850, label: 'c. 850', title: 'Vijayalaya takes Thanjavur', text: 'A Chola chief captures Thanjavur from the Mutharaiyars, founding the dynasty\'s imperial line.', place: 'Thanjavur', ll: [10.783, 79.131], clue: 'A Kaveri-delta city seized around 850 became the heart of a resurgent empire.' },
-        { year: 903, label: 'c. 903', title: 'Aditya I defeats the Pallavas', text: 'Chola king Aditya I defeats Aparajita Pallava, ending the Pallava dynasty and taking Tondaimandalam.', place: 'Tirupurambiyam', ll: [10.96, 79.38], clue: 'A village near Kumbakonam gave its name to the battle that ended the Pallavas.' },
+        { year: 897, label: 'c. 897', title: 'Aditya I defeats the Pallavas', text: 'Chola king Aditya I defeats Aparajita Pallava, ending the Pallava dynasty and taking Tondaimandalam.', place: 'Tirupurambiyam', ll: [10.96, 79.38], clue: 'A village near Kumbakonam gave its name to the battle that ended the Pallavas.' },
         { year: 915, label: 'c. 915', title: 'Al-Masudi visits India\'s west coast', text: 'The Baghdad-born historian travels through Sindh, Gujarat and the Konkan and records the kingdoms of the Balhara (Rashtrakuta) and the Pratiharas.', place: 'Khambhat (Cambay)', ll: [22.31, 72.62], clue: 'A Gujarat port on a gulf of the same name was visited by an Arab historian about 915.' },
         { year: 916, label: 'c. 916', title: 'Indra III sacks Kannauj', text: 'The Rashtrakuta king raids the Pratihara capital, weakening the empire that had resisted the Arabs for two centuries.', place: 'Kannauj', ll: [27.05, 79.92], clue: 'The Pratihara capital on the Ganga was plundered by a Deccan king in 916.' }
       ]
@@ -361,7 +361,7 @@
         { year: 1757, label: '1757', title: 'Battle of Plassey', text: 'Robert Clive defeats Siraj ud-Daulah, the Nawab of Bengal, laying the foundation for Company rule.', place: 'Plassey (Palashi)', ll: [23.8, 88.25], clue: 'A mango grove in Bengal where a short 1757 battle changed the subcontinent\'s history.' },
         { year: 1761, label: '1761', title: 'Third Battle of Panipat', text: 'Ahmad Shah Durrani defeats the Maratha army, halting Maratha expansion in the north.', place: 'Panipat', ll: [29.39, 76.97], clue: 'The same northern plain as Babur\'s 1526 victory hosted a huge clash in 1761.' },
         { year: 1765, label: '1765', title: 'Company obtains the diwani of Bengal', text: 'After Buxar, the Mughal emperor grants the East India Company the right to collect revenue in Bengal, Bihar and Orissa.', place: 'Allahabad', ll: [25.43, 81.84], clue: 'A confluence city where in 1765 the Mughal emperor handed over the revenues of a rich province.' },
-        { year: 1782, label: '1782', title: 'Treaty of Salbai', text: 'Ends the First Anglo-Maratha War, recognising Maratha power and the status quo of 1775.', place: 'Salbai', ll: [26.06, 78.2], clue: 'A village near Gwalior gave its name to a treaty that ended a war in 1782.' }
+        { year: 1782, label: '1782', title: 'Treaty of Salbai', text: 'Ends the First Anglo-Maratha War: territory the British took after the Treaty of Purandar (1776) is returned and Maratha power is recognised.', place: 'Salbai', ll: [26.06, 78.2], clue: 'A village near Gwalior gave its name to a treaty that ended a war in 1782.' }
       ]
     },
     {

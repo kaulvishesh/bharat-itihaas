@@ -11,7 +11,7 @@
     en: {
       title: 'Atlas of India', subtitle: 'Atlas of India · 500 BCE → Today', moreLabel: 'Layers', reset: 'Reset view', listen: 'Listen',
       stage: (n, m) => 'Era ' + n + ' of ' + m, vs: 'Vikram Samvat', saka: 'Saka',
-      play: 'Play', pause: 'Pause', tour: 'Guided tour', quiz: 'Quiz', exitQuiz: 'Exit quiz', share: 'Share', copied: 'Link copied', github: 'Source on GitHub',
+      play: 'Play', pause: 'Pause', tour: 'Guided tour', quiz: 'Quiz', exitQuiz: 'Exit quiz', share: 'Share', copied: 'Link copied', github: 'Source on GitHub', sources: 'Sources & AI use',
       search: 'Search places, events, empires…',
       rulers: 'Rulers & figures', realms: 'Realms', events: 'Key events', places: 'Places', journeys: 'Journeys & campaigns', trace: 'Trace',
       source: (snap) => 'Boundaries: data-source snapshot of ' + snap + ' (approximate).',
@@ -30,7 +30,7 @@
     hi: {
       title: 'भारत का मानचित्र-इतिहास', subtitle: 'भारत का मानचित्र-इतिहास · 500 ई.पू. → आज', moreLabel: 'परतें', reset: 'दृश्य रीसेट', listen: 'सुनें',
       stage: (n, m) => 'युग ' + n + '/' + m, vs: 'विक्रम संवत', saka: 'शक',
-      play: 'चलाएँ', pause: 'रोकें', tour: 'निर्देशित यात्रा', quiz: 'प्रश्नोत्तरी', exitQuiz: 'बाहर निकलें', share: 'साझा करें', copied: 'लिंक कॉपी हुआ', github: 'GitHub पर स्रोत-कोड',
+      play: 'चलाएँ', pause: 'रोकें', tour: 'निर्देशित यात्रा', quiz: 'प्रश्नोत्तरी', exitQuiz: 'बाहर निकलें', share: 'साझा करें', copied: 'लिंक कॉपी हुआ', github: 'GitHub पर स्रोत-कोड', sources: 'स्रोत और AI का उपयोग (अंग्रेज़ी पृष्ठ)',
       search: 'स्थान, घटनाएँ, साम्राज्य खोजें…',
       rulers: 'शासक और व्यक्तित्व', realms: 'राज्य', events: 'प्रमुख घटनाएँ', places: 'स्थान', journeys: 'यात्राएँ और अभियान', trace: 'देखें',
       source: (snap) => 'सीमाएँ: डेटा-स्रोत का ' + snap + ' का स्नैपशॉट (अनुमानित)।',
@@ -463,7 +463,7 @@
     h += '<details class="sec"><summary>' + t().rulers + '</summary><ul class="rulers">' + (hi() && e.rulersHi ? e.rulersHi : e.rulers).map((r) => '<li>' + r + '</li>').join('') + '</ul></details>';
     h += '<details class="sec"><summary>' + t().places + ' <em>' + e.places.length + '</em></summary><ul class="places">' + e.places.map((pl, i) =>
       '<li data-pl="' + i + '"><b>' + escapeHtml(pick(pl, 'n')) + '</b> — ' + escapeHtml(pick(pl, 'note') || '') + '</li>').join('') + '</ul></details>';
-    h += '<div class="p-foot">' + t().disclaimer + ' <a href="' + REPO + '" target="_blank" rel="noopener noreferrer">' + t().github + ' ↗</a> <span class="views" data-views hidden></span></div>';
+    h += '<div class="p-foot">' + t().disclaimer + ' <a href="' + REPO + '" target="_blank" rel="noopener noreferrer">' + t().github + ' ↗</a> · <a href="sources.html" target="_blank" rel="noopener">' + t().sources + ' ↗</a> <span class="views" data-views hidden></span></div>';
     panel.innerHTML = h;
     if (window.ATLAS_VIEWS) window.ATLAS_VIEWS.paint();
     panel.scrollTop = 0;
@@ -730,7 +730,7 @@
     setPlayIcon();
     $('moreLabel').textContent = t().moreLabel; $('btnReset').textContent = t().reset;
     $('btnQuiz').textContent = state.quiz ? t().exitQuiz : t().quiz;
-    $('btnTour').textContent = t().tour; $('btnShare').textContent = t().share; $('lnkGithubText').textContent = t().github;
+    $('btnTour').textContent = t().tour; $('btnShare').textContent = t().share; $('lnkGithubText').textContent = t().github; $('lnkSourcesText').textContent = t().sources;
     $('search').placeholder = t().search;
     $('disclaimer').textContent = t().disclaimer;
     setSeaLabels();
