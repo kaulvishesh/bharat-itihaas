@@ -27,9 +27,7 @@
 
   // ---- the "today" layers live in their own pane so a single clip rectangle can hide them left of the line ----
   const pane = map.createPane('nowPane'); pane.style.zIndex = 640; pane.style.pointerEvents = 'none';
-  const tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    pane: 'nowPane', maxNativeZoom: 13, maxZoom: 13, attribution: 'Imagery &copy; Esri, Maxar, Earthstar Geographics'
-  });
+  const tiles = ATLAS_TERRAIN.imagery({ pane: 'nowPane' });
   const renderer = L.svg({ pane: 'nowPane', padding: 0.6 });
   const group = L.layerGroup();
   let labelMarkers = [];

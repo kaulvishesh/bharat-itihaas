@@ -69,12 +69,9 @@
   // respect "reduce motion": no fly animations, static route lines
   const REDUCE = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   if (REDUCE) { const _fly = map.flyTo.bind(map); map.flyTo = (ll, z) => map.setView(ll, z == null ? map.getZoom() : z, { animate: false }); map.flyToBounds = (b, o) => map.fitBounds(b, Object.assign({ animate: false }, o)); void _fly; }
-  const relief = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
-    attribution: 'Tiles &copy; Esri — Source: Esri', maxNativeZoom: 13, maxZoom: 13
-  });
-  const imagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    attribution: 'Tiles &copy; Esri — Esri, Maxar, Earthstar Geographics', maxNativeZoom: 13, maxZoom: 13
-  });
+  // open, keyless map surfaces (js/terrain.js): relief and hillshade are drawn from public elevation data, satellite is NASA Blue Marble
+  const relief = ATLAS_TERRAIN.relief();
+  const imagery = ATLAS_TERRAIN.imagery();
   // ── custom "antique atlas" basemap: engraved sea, water-lined coasts, shaded hills, graticule ──
   map.createPane('landPane').style.zIndex = 210;
   const shadePane = map.createPane('shadePane'); shadePane.style.zIndex = 215; shadePane.classList.add('leaflet-shade-pane');
@@ -83,9 +80,7 @@
   const landRenderer = L.svg({ pane: 'landPane', padding: 0.6 });
   const gridRenderer = L.svg({ pane: 'gridPane', padding: 0.6 });
   const antique = L.layerGroup();
-  const hill = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}', {
-    pane: 'shadePane', maxNativeZoom: 13, maxZoom: 13, attribution: 'Hillshade &copy; Esri · Coastlines: Natural Earth'
-  });
+  const hill = ATLAS_TERRAIN.shade({ pane: 'shadePane' });
   const LAND = window.ATLAS_LAND || [];
   [[36, 0.05], [25, 0.07], [16, 0.1], [9, 0.16], [4, 0.26]].forEach(([w, o]) => {   // water-lining: soft concentric ripples
     LAND.forEach((poly) => antique.addLayer(L.polygon(poly, { renderer: landRenderer, fill: false, color: '#bfd9df', weight: w, opacity: o, lineJoin: 'round', interactive: false })));

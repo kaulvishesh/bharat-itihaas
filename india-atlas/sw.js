@@ -1,9 +1,9 @@
 /* Service worker: offline app shell + Leaflet from the CDN. Map tiles are NOT cached (they need a network). */
-const VERSION = 'atlas-v59';
+const VERSION = 'atlas-v60';
 const SHELL = [
-  './', 'index.html', 'css/fonts.css?v=59', 'css/style.css?v=59', 'css/wow.css?v=59',
-  'js/data.js?v=59', 'js/data_hi.js?v=59', 'js/geo.js?v=59', 'js/land.js?v=59', 'js/icons.js?v=59', 'js/detail.js?v=59', 'js/realm_notes.js?v=59', 'js/lod.js?v=59', 'js/wiki.js?v=59', 'js/declutter.js?v=59', 'js/routes.js?v=59', 'js/people.js?v=59', 'js/rivers.js?v=59', 'js/works.js?v=59',
-  'js/core.js?v=59', 'js/event_wiki.js?v=59', 'js/battles.js?v=59', 'js/landmarks.js?v=59', 'js/app.js?v=59', 'js/extras.js?v=59', 'js/preintro.js?v=59', 'js/voice.js?v=59', 'js/journeys_data.js?v=59', 'js/journeys.js?v=59', 'js/swipe.js?v=59', 'js/intro.js?v=59', 'js/sw-register.js?v=59', 'icon.svg', 'manifest.webmanifest'
+  './', 'index.html', 'css/fonts.css?v=60', 'css/style.css?v=60', 'css/wow.css?v=60',
+  'js/data.js?v=60', 'js/data_hi.js?v=60', 'js/geo.js?v=60', 'js/land.js?v=60', 'js/icons.js?v=60', 'js/detail.js?v=60', 'js/realm_notes.js?v=60', 'js/lod.js?v=60', 'js/wiki.js?v=60', 'js/declutter.js?v=60', 'js/routes.js?v=60', 'js/people.js?v=60', 'js/rivers.js?v=60', 'js/works.js?v=60',
+  'js/core.js?v=60', 'js/event_wiki.js?v=60', 'js/battles.js?v=60', 'js/terrain.js?v=60', 'js/landmarks.js?v=60', 'js/app.js?v=60', 'js/extras.js?v=60', 'js/preintro.js?v=60', 'js/voice.js?v=60', 'js/journeys_data.js?v=60', 'js/journeys.js?v=60', 'js/swipe.js?v=60', 'js/intro.js?v=60', 'js/sw-register.js?v=60', 'icon.svg', 'manifest.webmanifest'
 ];
 const CDN = ['https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css', 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js'];
 
