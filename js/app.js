@@ -11,7 +11,7 @@
     en: {
       title: 'Atlas of India', subtitle: 'Atlas of India · 500 BCE → Today', moreLabel: 'Layers', reset: 'Reset view', listen: 'Listen',
       stage: (n, m) => 'Era ' + n + ' of ' + m, vs: 'Vikram Samvat', saka: 'Saka',
-      play: 'Play', pause: 'Pause', tour: 'Guided tour', quiz: 'Quiz', exitQuiz: 'Exit quiz', share: 'Share', copied: 'Link copied',
+      play: 'Play', pause: 'Pause', tour: 'Guided tour', quiz: 'Quiz', exitQuiz: 'Exit quiz', share: 'Share', copied: 'Link copied', github: 'Source on GitHub',
       search: 'Search places, events, empires…',
       rulers: 'Rulers & figures', realms: 'Realms', events: 'Key events', places: 'Places', journeys: 'Journeys & campaigns', trace: 'Trace',
       source: (snap) => 'Boundaries: data-source snapshot of ' + snap + ' (approximate).',
@@ -30,7 +30,7 @@
     hi: {
       title: 'भारत का मानचित्र-इतिहास', subtitle: 'भारत का मानचित्र-इतिहास · 500 ई.पू. → आज', moreLabel: 'परतें', reset: 'दृश्य रीसेट', listen: 'सुनें',
       stage: (n, m) => 'युग ' + n + '/' + m, vs: 'विक्रम संवत', saka: 'शक',
-      play: 'चलाएँ', pause: 'रोकें', tour: 'निर्देशित यात्रा', quiz: 'प्रश्नोत्तरी', exitQuiz: 'बाहर निकलें', share: 'साझा करें', copied: 'लिंक कॉपी हुआ',
+      play: 'चलाएँ', pause: 'रोकें', tour: 'निर्देशित यात्रा', quiz: 'प्रश्नोत्तरी', exitQuiz: 'बाहर निकलें', share: 'साझा करें', copied: 'लिंक कॉपी हुआ', github: 'GitHub पर स्रोत-कोड',
       search: 'स्थान, घटनाएँ, साम्राज्य खोजें…',
       rulers: 'शासक और व्यक्तित्व', realms: 'राज्य', events: 'प्रमुख घटनाएँ', places: 'स्थान', journeys: 'यात्राएँ और अभियान', trace: 'देखें',
       source: (snap) => 'सीमाएँ: डेटा-स्रोत का ' + snap + ' का स्नैपशॉट (अनुमानित)।',
@@ -52,6 +52,7 @@
   const tour = { on: false, steps: [], n: 0, timer: null, paused: false };
   const $ = (id) => document.getElementById(id);
   const t = () => UI[state.lang];
+  const REPO = 'https://github.com/kaulvishesh/bharat-itihaas';
   const hi = () => state.lang === 'hi';
   const pick = (o, k) => (hi() && o[k + 'Hi']) ? o[k + 'Hi'] : o[k];
   const escapeHtml = (x) => String(x).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -453,7 +454,7 @@
     h += '<details class="sec"><summary>' + t().rulers + '</summary><ul class="rulers">' + (hi() && e.rulersHi ? e.rulersHi : e.rulers).map((r) => '<li>' + r + '</li>').join('') + '</ul></details>';
     h += '<details class="sec"><summary>' + t().places + ' <em>' + e.places.length + '</em></summary><ul class="places">' + e.places.map((pl, i) =>
       '<li data-pl="' + i + '"><b>' + escapeHtml(pick(pl, 'n')) + '</b> — ' + escapeHtml(pick(pl, 'note') || '') + '</li>').join('') + '</ul></details>';
-    h += '<div class="p-foot">' + t().disclaimer + '</div>';
+    h += '<div class="p-foot">' + t().disclaimer + ' <a href="' + REPO + '" target="_blank" rel="noopener noreferrer">' + t().github + ' ↗</a></div>';
     panel.innerHTML = h;
     panel.scrollTop = 0;
     $('btnSpeak').addEventListener('click', () => { speak(pick(e, 'name') + '. ' + pick(e, 'tag') + ' ' + (pick(e, 'story') || '')); });
@@ -719,7 +720,7 @@
     setPlayIcon();
     $('moreLabel').textContent = t().moreLabel; $('btnReset').textContent = t().reset;
     $('btnQuiz').textContent = state.quiz ? t().exitQuiz : t().quiz;
-    $('btnTour').textContent = t().tour; $('btnShare').textContent = t().share;
+    $('btnTour').textContent = t().tour; $('btnShare').textContent = t().share; $('lnkGithubText').textContent = t().github;
     $('search').placeholder = t().search;
     $('disclaimer').textContent = t().disclaimer;
     setSeaLabels();
@@ -761,7 +762,7 @@
     startTour: () => { if (!tour.on) startTour(); }, stopTour: () => { if (tour.on) stopTour(); },
     search: (q) => { runSearch(q); return ($('results')._top || []).map((x) => ({ kind: x.k, era: x.i, name: x.o[x.f] })); },
     mute, traceBtn, wikiSlot, POP, selectRealm, clearRealm, focusPoly, getPoly: (i) => polyById[i], realm: () => state.realm,
-    toast, share: shareLink, stopPlay, renderTimeline, isBusy: () => !!(state.quiz || tour.on)
+    toast, share: shareLink, repo: REPO, stopPlay, renderTimeline, isBusy: () => !!(state.quiz || tour.on)
   };
 
   // deep link: #era=3&lang=hi

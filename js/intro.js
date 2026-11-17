@@ -85,6 +85,7 @@
       '<dl class="in-stats"><div><dt data-n="' + st.years + '">0</dt><dd>' + t.years + '</dd></div><div><dt data-n="' + st.eras + '">0</dt><dd>' + t.eras + '</dd></div><div><dt data-n="' + st.events + '">0</dt><dd>' + t.events + '</dd></div><div><dt data-n="' + st.places + '">0</dt><dd>' + t.places + '</dd></div></dl>' +
       '<div class="in-cta"><button type="button" class="in-go">' + escapeHtml(t.go) + ' <span aria-hidden="true">→</span></button><button type="button" class="in-skip">' + escapeHtml(t.skip) + '</button></div></div>' +
       '<div class="in-art">' + mapSvg(h) + '</div>' +
+      '<a class="in-gh" href="' + A.repo + '" target="_blank" rel="noopener noreferrer">' + (h ? 'GitHub पर स्रोत-कोड' : 'Open source on GitHub') + ' ↗</a>' +
       '<button type="button" class="in-music"><span class="ml"></span></button>' +
       '<button type="button" class="in-lang" aria-label="Language">' + escapeHtml(t.lang) + '</button>';
     if (window.ATLAS_MUSIC) window.ATLAS_MUSIC.bind(root.querySelector('.in-music')); else root.querySelector('.in-music').remove();
@@ -119,7 +120,7 @@
     if (!html.classList.contains('intro-on') || !root.firstChild) return;
     if (e.key === 'Escape') { e.preventDefault(); e.stopImmediatePropagation(); hide(); }
     else if (e.key === 'Tab') { // keep focus inside the dialog
-      const f = [...root.querySelectorAll('button')]; if (!f.length) return;
+      const f = [...root.querySelectorAll('button, a[href]')]; if (!f.length) return;
       const i = f.indexOf(document.activeElement), n = e.shiftKey ? (i <= 0 ? f.length - 1 : i - 1) : (i === f.length - 1 ? 0 : i + 1);
       e.preventDefault(); f[n].focus();
     } else if (e.key.indexOf('Arrow') === 0 || e.key === '/') e.stopImmediatePropagation();
