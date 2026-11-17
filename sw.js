@@ -1,9 +1,9 @@
 /* Service worker: offline app shell + Leaflet from the CDN. Map tiles are NOT cached (they need a network). */
-const VERSION = 'atlas-v65';
+const VERSION = 'atlas-v66';
 const SHELL = [
-  './', 'index.html', 'css/fonts.css?v=65', 'css/style.css?v=65', 'css/wow.css?v=65',
-  'js/data.js?v=65', 'js/data_hi.js?v=65', 'js/geo.js?v=65', 'js/land.js?v=65', 'js/icons.js?v=65', 'js/detail.js?v=65', 'js/realm_notes.js?v=65', 'js/lod.js?v=65', 'js/wiki.js?v=65', 'js/declutter.js?v=65', 'js/routes.js?v=65', 'js/people.js?v=65', 'js/rivers.js?v=65', 'js/works.js?v=65',
-  'js/core.js?v=65', 'js/event_wiki.js?v=65', 'js/battles.js?v=65', 'js/terrain.js?v=65', 'js/landmarks.js?v=65', 'js/app.js?v=65', 'js/extras.js?v=65', 'js/preintro.js?v=65', 'js/voice.js?v=65', 'js/music.js?v=65', 'js/views.js?v=65', 'js/journeys_data.js?v=65', 'js/journeys.js?v=65', 'js/swipe.js?v=65', 'js/intro.js?v=65', 'js/sw-register.js?v=65', 'icon.svg', 'manifest.webmanifest'
+  './', 'index.html', 'css/fonts.css?v=66', 'css/style.css?v=66', 'css/wow.css?v=66',
+  'js/data.js?v=66', 'js/data_hi.js?v=66', 'js/geo.js?v=66', 'js/land.js?v=66', 'js/icons.js?v=66', 'js/detail.js?v=66', 'js/realm_notes.js?v=66', 'js/lod.js?v=66', 'js/wiki.js?v=66', 'js/declutter.js?v=66', 'js/routes.js?v=66', 'js/people.js?v=66', 'js/rivers.js?v=66', 'js/works.js?v=66',
+  'js/core.js?v=66', 'js/event_wiki.js?v=66', 'js/battles.js?v=66', 'js/terrain.js?v=66', 'js/landmarks.js?v=66', 'js/app.js?v=66', 'js/extras.js?v=66', 'js/preintro.js?v=66', 'js/voice.js?v=66', 'js/music.js?v=66', 'js/views.js?v=66', 'js/journeys_data.js?v=66', 'js/journeys.js?v=66', 'js/swipe.js?v=66', 'js/intro.js?v=66', 'js/sw-register.js?v=66', 'icon.svg', 'manifest.webmanifest'
 ];
 const CDN = ['https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css', 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js'];
 
