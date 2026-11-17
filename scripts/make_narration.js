@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /*
  * Pre-renders the Journeys' narration with Kokoro-82M (Apache-2.0), a neural text-to-speech model from Hugging Face,
- * and writes small MP3 clips to india-atlas/audio/en/ plus audio/manifest.json. The player (js/voice.js) plays a clip
+ * and writes small MP3 clips to audio/en/ plus audio/manifest.json. The player (js/voice.js) plays a clip
  * when its text hash matches the manifest and falls back to the browser's own voice otherwise, so editing a caption
  * never breaks narration: it just needs this script re-run. Only changed captions are re-rendered.
  *
@@ -12,7 +12,7 @@
  */
 'use strict';
 const fs = require('fs'), path = require('path'), vm = require('vm');
-const ROOT = path.join(__dirname, '..', 'india-atlas'), OUT = path.join(ROOT, 'audio'), VOICE = 'af_heart', SPEED = 0.95, RATE = 24000;
+const ROOT = path.join(__dirname, '..'), OUT = path.join(ROOT, 'audio'), VOICE = 'af_heart', SPEED = 0.95, RATE = 24000;
 const MODS = process.env.NARRATION_MODULES || path.join(__dirname, 'narration');
 const req = require('module').createRequire(path.join(MODS, 'x.js'));
 const { KokoroTTS } = req('kokoro-js');

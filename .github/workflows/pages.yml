@@ -30,8 +30,30 @@ jobs:
       - name: Build topic pages with the real site URL
         run: node scripts/build_topics.js --base "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
       - uses: actions/configure-pages@v5
+      - name: Stage the runtime site (leave out repo tooling and project docs)
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='.claude/' \
+            --exclude='_site/' \
+            --exclude='scripts/' \
+            --exclude='raw-data/' \
+            --exclude='upstream/' \
+            --exclude='node_modules/' \
+            --exclude='assets/' \
+            --exclude='/README*.md' \
+            --exclude='/CONTRIBUTING*.md' \
+            --exclude='/Dockerfile' \
+            --exclude='/docker-compose.yml' \
+            --exclude='/.dockerignore' \
+            --exclude='/.gitignore' \
+            --exclude='/.gitattributes' \
+            ./ _site/
+          du -sh _site
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: india-atlas
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4

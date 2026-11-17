@@ -2,15 +2,15 @@
 /*
  * Self-hosts the site's fonts so visitors' browsers never contact Google (their IP address would otherwise go to Google on
  * every page load, which is a privacy problem under EU rules). All seven families are SIL Open Font License 1.1, which allows
- * bundling and redistribution provided the licence text travels with them (saved in india-atlas/fonts/licenses/).
+ * bundling and redistribution provided the licence text travels with them (saved in fonts/licenses/).
  *
  * Downloads the woff2 files for the Latin, Latin-extended (IAST diacritics such as ā ṇ ś) and Devanagari subsets that the
- * site uses, writes india-atlas/css/fonts.css and india-atlas/fonts/. Run once; the output is committed.
+ * site uses, writes css/fonts.css and fonts/. Run once; the output is committed.
  *   node scripts/fetch_fonts.js
  */
 'use strict';
 const fs = require('fs'), path = require('path');
-const OUT = path.join(__dirname, '..', 'india-atlas'), FONTS = path.join(OUT, 'fonts'), LIC = path.join(FONTS, 'licenses');
+const OUT = path.join(__dirname, '..'), FONTS = path.join(OUT, 'fonts'), LIC = path.join(FONTS, 'licenses');
 const SUBSETS = new Set(['latin', 'latin-ext', 'devanagari']);
 const FAMILIES = 'family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Cinzel:wght@500;600;700&family=Noto+Serif:wght@400;600;700&family=Noto+Serif+Devanagari:wght@400;600;700&family=Noto+Sans:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&family=Amita:wght@400;700&display=swap';
 const LICENCE_DIRS = { 'Cormorant Garamond': 'cormorantgaramond', Cinzel: 'cinzel', 'Noto Serif': 'notoserif', 'Noto Serif Devanagari': 'notoserifdevanagari', 'Noto Sans': 'notosans', 'Noto Sans Devanagari': 'notosansdevanagari', Amita: 'amita' };

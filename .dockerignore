@@ -1,0 +1,13 @@
+.git
+.github
+.claude
+node_modules
+upstream
+raw-data
+scripts
+assets
+README*.md
+CONTRIBUTING*.md
+Dockerfile
+docker-compose.yml
+.dockerignore

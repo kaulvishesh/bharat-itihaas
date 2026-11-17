@@ -1,0 +1,29 @@
+name: Atlas checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  checks:
+    name: Validate data, scripts and MCP server
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Every script parses
+        run: |
+          for f in js/*.js sw.js scripts/*.js; do node --check "$f" || exit 1; done
+      - name: Data integrity (Hindi coverage, coordinates, sorting)
+        run: node scripts/validate.js
+      - name: MCP server smoke test
+        run: node scripts/test_mcp.js
+      - name: Generated files are in sync with the data
+        run: |
+          node scripts/export_geojson.js
+          node scripts/export_data.js
+          git diff --exit-code -- geojson data || (echo "geojson/ or data/ is stale: run node scripts/export_geojson.js and node scripts/export_data.js, then commit" && exit 1)

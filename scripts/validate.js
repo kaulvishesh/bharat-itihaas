@@ -6,7 +6,7 @@ const { ERAS, GEO, ROUTES, PEOPLE, RIVERS, core } = load();
 const works = (() => {
   const vm = require('vm'), fs = require('fs'), path = require('path');
   const sb = { window: {} }; vm.createContext(sb);
-  vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'india-atlas', 'js', 'works.js'), 'utf8'), sb);
+  vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'js', 'works.js'), 'utf8'), sb);
   return sb.window.ATLAS_WORKS;
 })();
 

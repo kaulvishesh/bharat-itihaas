@@ -1,4 +1,4 @@
-"""Build india-atlas/js/land.js (a coastline for the custom 'Antique' basemap) from Natural Earth 50m land.
+"""Build js/land.js (a coastline for the custom 'Antique' basemap) from Natural Earth 50m land.
 
 Usage: python -I scripts/build_land.py <ne_50m_land.geojson> <out_js>
 Natural Earth data is public domain (naturalearthdata.com). Output: window.ATLAS_LAND = [ polygon, ... ],

@@ -1,11 +1,11 @@
-// Writes one GeoJSON FeatureCollection per era to india-atlas/geojson/. Usage: node scripts/export_geojson.js
+// Writes one GeoJSON FeatureCollection per era to geojson/. Usage: node scripts/export_geojson.js
 'use strict';
 const fs = require('fs');
 const path = require('path');
 const { load } = require('./atlas_data');
 
 const { ERAS, GEO } = load();
-const out = path.join(__dirname, '..', 'india-atlas', 'geojson');
+const out = path.join(__dirname, '..', 'geojson');
 fs.mkdirSync(out, { recursive: true });
 const index = [];
 ERAS.forEach((e, i) => {

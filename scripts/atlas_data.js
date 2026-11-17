@@ -5,7 +5,7 @@ const path = require('path');
 const vm = require('vm');
 
 function load() {
-  const dir = path.join(__dirname, '..', 'india-atlas', 'js');
+  const dir = path.join(__dirname, '..', 'js');
   const sandbox = { window: {}, console };
   vm.createContext(sandbox);
   ['data.js', 'data_hi.js', 'geo.js', 'routes.js', 'people.js', 'rivers.js'].forEach((f) => {

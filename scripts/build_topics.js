@@ -10,7 +10,7 @@ const args = process.argv.slice(2);
 const bi = args.indexOf('--base');
 const BASE = (bi >= 0 ? args[bi + 1] : 'https://your-host.example/atlas/').replace(/\/?$/, '/');
 const { ERAS, GEO, ROUTES, PEOPLE } = load();
-const root = path.join(__dirname, '..', 'india-atlas');
+const root = path.join(__dirname, '..');
 const out = path.join(root, 'topics');
 
 const T = {

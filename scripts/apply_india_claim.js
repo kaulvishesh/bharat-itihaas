@@ -17,7 +17,7 @@
  */
 'use strict';
 const fs = require('fs'), path = require('path'), vm = require('vm');
-const ROOT = path.join(__dirname, '..'), GEO = path.join(ROOT, 'india-atlas', 'js', 'geo.js'), NE = path.join(ROOT, 'raw-data', 'ne');
+const ROOT = path.join(__dirname, '..'), GEO = path.join(ROOT, 'js', 'geo.js'), NE = path.join(ROOT, 'raw-data', 'ne');
 const pc = require('module').createRequire(path.join(process.env.CLAIM_MODULES || path.join(__dirname, 'claim'), 'x.js'))('polygon-clipping');
 
 const MARK = '/* India (1960, 2010): redrawn to India\'s official position by scripts/apply_india_claim.js (Natural Earth, India point of view). */';

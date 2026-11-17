@@ -1,4 +1,4 @@
-"""Build india-atlas/js/geo.js from historical-basemaps GeoJSON snapshots.
+"""Build js/geo.js from historical-basemaps GeoJSON snapshots.
 
 Usage: python -I scripts/build_geo.py <raw_dir> <out_js>
 Data: aourednik/historical-basemaps (GPL-3.0). Boundaries are approximations.

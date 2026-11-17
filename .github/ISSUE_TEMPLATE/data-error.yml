@@ -1,0 +1,50 @@
+name: Data correction / डेटा सुधार
+description: A wrong year, place, person, border or event description / ग़लत वर्ष, स्थान, व्यक्ति, सीमा या घटना का विवरण
+title: "[Correction] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for the correction. Please cite a source (work plus chapter or page, or a link) so we can check it before changing the atlas.
+        सुधार के लिए धन्यवाद। कृपया स्रोत (पुस्तक और अध्याय/पृष्ठ, या लिंक) दें ताकि हम बदलाव से पहले जाँच सकें।
+  - type: input
+    id: year
+    attributes:
+      label: Year / वर्ष
+      description: The year or era on the map; use "BCE" for years before the common era / नक़्शे पर दिखता वर्ष या युग
+      placeholder: "250 BCE"
+    validations:
+      required: true
+  - type: input
+    id: subject
+    attributes:
+      label: Place, person or event / स्थान, व्यक्ति या घटना
+      placeholder: "Nalanda / नालंदा"
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: What the atlas shows now / अभी क्या दिखता है
+      description: Paste the text or attach a screenshot / पाठ चिपकाएँ या स्क्रीनशॉट जोड़ें
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What it should be / क्या होना चाहिए
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source / स्रोत
+      description: Work and chapter or page, with a link if available / पुस्तक और अध्याय या पृष्ठ, लिंक हो तो साथ में
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Atlas link (optional) / नक़्शे का लिंक (वैकल्पिक)
+      description: The address bar link keeps the era and the view / ब्राउज़र का लिंक युग और दृश्य सहित रहता है
